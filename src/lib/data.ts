@@ -6,7 +6,7 @@ export const personal = {
   email: "rickyantonio.codes@gmail.com",
   github: "https://github.com/ricky-antonio",
   linkedin: "https://www.linkedin.com/in/ricardomonterrosa/",
-  bio: "A skilled React developer with a passion for crafting sleek, engaging, and user-focused web experiences. Combining creativity and technical expertise, I thrive on building intuitive interfaces that deliver seamless functionality and modern aesthetics. When I'm not coding, you'll find me on the mats training jiu jitsu.",
+  bio: "A full-stack engineer with a passion for crafting sleek, performant, and user-focused web experiences. I work across the entire stack — from pixel-perfect UIs to scalable APIs — combining technical depth with a sharp eye for design. When I'm not shipping, you'll find me on the mats training jiu jitsu.",
   hobbies: ["eat...", "code...", "jiu jitsu...", "sleep...", "repeat..."],
 };
 
