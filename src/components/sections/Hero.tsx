@@ -92,7 +92,7 @@ export function Hero() {
                 <span className="text-muted">,</span>
                 {"\n"}
                 {"  "}
-                <span className="text-accent">hobby</span>
+                <span className="text-accent">dailyRoutine</span>
                 <span className="text-muted">: () </span>
                 <span className="text-pink-400">=&gt;</span>
                 <span className="text-fg"> {"{"}</span>
@@ -109,6 +109,7 @@ export function Hero() {
                 ))}
                 {"  "}
                 <span className="text-fg">{"}"}</span>
+                <span className="text-muted">,</span>
                 {"\n"}
                 <span className="text-fg">{"}"}</span>
               </pre>
