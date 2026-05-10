@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Semantic color tokens — swap on dark class */
+:root {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --accent: #7c3aed;
+  --accent-2: #db2777;
+  --accent-glow: #7c3aed40;
+  --fg: #1e1b4b;
+  --muted: #64748b;
+  --border: #e2e8f0;
+}
+
+.dark {
+  --bg: #0d0d14;
+  --surface: #13131f;
+  --accent: #a855f7;
+  --accent-2: #ec4899;
+  --accent-glow: #a855f740;
+  --fg: #f5f5ff;
+  --muted: #94a3b8;
+  --border: #1e1e30;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent-glow: var(--accent-glow);
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
