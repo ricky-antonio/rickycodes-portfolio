@@ -111,7 +111,8 @@ export const projects = [
 export const experience = [
   {
     role: "Autonomous Vehicle Operations Supervisor",
-    company: "Transdev — Waymo Project",
+    project: "Waymo Project",
+    company: "Transdev",
     location: "San Diego, CA",
     period: "2025 – Present",
     bullets: [

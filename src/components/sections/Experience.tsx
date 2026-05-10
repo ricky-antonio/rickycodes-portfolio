@@ -44,8 +44,13 @@ export function Experience() {
                   {/* Header */}
                   <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
                     <div>
-                      <h3 className="text-lg font-bold text-fg">{job.role}</h3>
-                      <span className="text-base font-semibold text-accent">{job.company}</span>
+                      <h3 className="text-lg font-bold text-fg">
+                        {job.role}
+                        {"project" in job && job.project && (
+                          <span className="text-accent"> — {job.project}</span>
+                        )}
+                      </h3>
+                      <span className="text-base font-semibold text-muted">{job.company}</span>
                     </div>
                     <div className="flex flex-col gap-1 text-xs text-muted sm:items-end">
                       <span className="flex items-center gap-1.5">
