@@ -2,33 +2,39 @@
 
 import { motion } from "framer-motion";
 import {
-  SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiRedux,
-  SiReactrouter, SiReactquery, SiNodedotjs, SiSupabase, SiAppwrite,
-  SiGit, SiGithub, SiWordpress, SiPhp, SiGreensock, SiThreedotjs,
-  SiShadcnui,
+  SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiRedux, SiShadcnui,
+  SiNodedotjs, SiPython, SiPostman, SiMysql, SiMongodb, SiSupabase, SiAppwrite,
+  SiPandas, SiNumpy, SiPlotly, SiScikitlearn, SiJupyter,
+  SiGit, SiGithub, SiSalesforce, SiGreensock, SiThreedotjs, SiWordpress,
 } from "react-icons/si";
+import { skills } from "@/lib/data";
 
 const iconMap: Record<string, React.ReactNode> = {
-  SiTypescript:   <SiTypescript />,
-  SiReact:        <SiReact />,
-  SiNextdotjs:    <SiNextdotjs />,
-  SiTailwindcss:  <SiTailwindcss />,
-  SiRedux:        <SiRedux />,
-  SiReactrouter:  <SiReactrouter />,
-  SiReactquery:   <SiReactquery />,
-  SiNodedotjs:    <SiNodedotjs />,
-  SiSupabase:     <SiSupabase />,
-  SiAppwrite:     <SiAppwrite />,
-  SiGit:          <SiGit />,
-  SiGithub:       <SiGithub />,
-  SiWordpress:    <SiWordpress />,
-  SiPhp:          <SiPhp />,
-  SiGreensock:    <SiGreensock />,
-  SiThreedotjs:   <SiThreedotjs />,
-  SiShadcnui:     <SiShadcnui />,
+  SiTypescript:  <SiTypescript />,
+  SiReact:       <SiReact />,
+  SiNextdotjs:   <SiNextdotjs />,
+  SiTailwindcss: <SiTailwindcss />,
+  SiRedux:       <SiRedux />,
+  SiShadcnui:    <SiShadcnui />,
+  SiNodedotjs:   <SiNodedotjs />,
+  SiPython:      <SiPython />,
+  SiPostman:     <SiPostman />,
+  SiMysql:       <SiMysql />,
+  SiMongodb:     <SiMongodb />,
+  SiSupabase:    <SiSupabase />,
+  SiAppwrite:    <SiAppwrite />,
+  SiPandas:      <SiPandas />,
+  SiNumpy:       <SiNumpy />,
+  SiPlotly:      <SiPlotly />,
+  SiScikitlearn: <SiScikitlearn />,
+  SiJupyter:     <SiJupyter />,
+  SiGit:         <SiGit />,
+  SiGithub:      <SiGithub />,
+  SiSalesforce:  <SiSalesforce />,
+  SiGreensock:   <SiGreensock />,
+  SiThreedotjs:  <SiThreedotjs />,
+  SiWordpress:   <SiWordpress />,
 };
-
-import { skills } from "@/lib/data";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -40,6 +46,7 @@ const fadeUp = (delay = 0) => ({
 const categories = [
   { label: "Frontend",          key: "frontend" as const },
   { label: "Backend & Database", key: "backend"  as const },
+  { label: "Data & Analytics",  key: "data"     as const },
   { label: "Tools & Other",     key: "tools"    as const },
 ];
 
