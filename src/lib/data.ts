@@ -53,7 +53,7 @@ export const projects = [
       "Cloud storage app built with cutting-edge tech stack, featuring secure file uploads and sleek UI.",
     tech: ["TypeScript", "React", "Next.js", "TailwindCSS", "ShadCN", "Appwrite"],
     github: "https://github.com/ricky-antonio/store_it",
-    demo: "https://store-it-ricky-antonio.vercel.app/",
+    demo: "https://store-it.rickycodes.dev/",
     image: "/projects/storeit.png",
   },
   {
@@ -63,7 +63,7 @@ export const projects = [
       "Modern booking platform for luxury rentals, featuring user authentication and a secure database.",
     tech: ["React", "Next.js", "NextAuth", "Supabase", "Tailwind"],
     github: "https://github.com/ricky-antonio/wild-oasis-website",
-    demo: "https://wild-oasis-gules-ten.vercel.app/",
+    demo: "https://wild-oasis.rickycodes.dev/",
     image: "/projects/wild-oasis.png",
   },
   {
@@ -73,7 +73,7 @@ export const projects = [
       "Admin dashboard enabling business management of bookings, analytics, and user insights.",
     tech: ["React", "Supabase", "React Query"],
     github: "https://github.com/ricky-antonio/wild-oasis-admin",
-    demo: "https://ricmonterrosa.com/wild-oasis-admin/dashboard",
+    demo: "https://wild-oasis-admin.rickycodes.dev/",
     image: "/projects/wild-oasis-admin.png",
   },
   {
@@ -83,7 +83,7 @@ export const projects = [
       "Dynamic site blending GSAP animations and cutting-edge 3D graphics technology for engaging experiences.",
     tech: ["React", "GSAP", "Three.js", "Tailwind", "Sentry"],
     github: "https://github.com/ricky-antonio/apple-clone",
-    demo: "https://ricmonterrosa.com/apple-iphone",
+    demo: "https://apple-iphone.rickycodes.dev/",
     image: "/projects/apple-clone.png",
   },
   {
@@ -93,7 +93,7 @@ export const projects = [
       "Visually engaging landing page, featuring sleek layout, responsive design, and modern UI.",
     tech: ["React", "Tailwind"],
     github: "https://github.com/ricky-antonio/brainwave",
-    demo: "https://ricmonterrosa.com/brainwave",
+    demo: "https://brainwave.rickycodes.dev/",
     image: "/projects/brainwave.png",
   },
   {
@@ -103,7 +103,7 @@ export const projects = [
       "Comprehensive crypto stats app leveraging Coinranking and News APIs, featuring dynamic price charts.",
     tech: ["React", "Redux", "React Router"],
     github: "https://github.com/ricky-antonio/react-api-cryptoverse",
-    demo: "https://ricmonterrosa.com/cryptoverse",
+    demo: "https://cryptoverse.rickycodes.dev/",
     image: "/projects/cryptoverse.png",
   },
 ];
