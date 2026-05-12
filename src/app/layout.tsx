@@ -17,6 +17,20 @@ export const metadata: Metadata = {
   title: "Ricardo Monterrosa | Software Engineer",
   description:
     "Software Engineer specializing in React. Building sleek, engaging, and user-focused web experiences.",
+  openGraph: {
+    title: "Ricardo Monterrosa | Software Engineer",
+    description:
+      "Software Engineer specializing in React. Building sleek, engaging, and user-focused web experiences.",
+    url: "https://rickycodes.dev",
+    siteName: "Ricardo Monterrosa",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ricardo Monterrosa | Software Engineer",
+    description:
+      "Software Engineer specializing in React. Building sleek, engaging, and user-focused web experiences.",
+  },
 };
 
 export default function RootLayout({
