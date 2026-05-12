@@ -1,18 +1,7 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { personal } from "@/lib/data";
-
-function fadeUp(delay: number) {
-  return {
-    initial: { opacity: 0, y: 24 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const, delay },
-  };
-}
 
 export function Hero() {
   return (
@@ -20,15 +9,8 @@ export function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* Background gradient blobs */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-40 -left-40 h-[600px] w-[600px] rounded-full bg-accent opacity-10 blur-[120px]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-40 -right-20 h-[500px] w-[500px] rounded-full bg-accent-2 opacity-10 blur-[120px]"
-      />
+      <div aria-hidden className="pointer-events-none absolute -top-40 -left-40 h-[600px] w-[600px] rounded-full bg-accent opacity-10 blur-[120px]" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-40 -right-20 h-[500px] w-[500px] rounded-full bg-accent-2 opacity-10 blur-[120px]" />
 
       <div className="relative mx-auto w-full max-w-6xl px-6 py-24 lg:py-32">
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-16">
@@ -36,37 +18,34 @@ export function Hero() {
           {/* ── Left column ── */}
           <div className="flex flex-1 flex-col items-center text-center lg:items-start lg:text-left">
 
-            {/* Overline */}
-            <motion.p
-              {...fadeUp(0)}
-              className="mb-4 font-mono text-sm font-semibold tracking-widest text-accent uppercase"
+            <p
+              className="anim-fade-up mb-4 font-mono text-sm font-semibold tracking-widest text-accent uppercase"
+              style={{ animationDelay: "0ms" }}
             >
               // Software Engineer
-            </motion.p>
+            </p>
 
-            {/* Name */}
-            <motion.h1
-              {...fadeUp(0.1)}
-              className="mb-3 text-5xl font-extrabold leading-tight tracking-tight text-fg sm:text-6xl lg:text-7xl"
+            <h1
+              className="anim-fade-up mb-3 text-5xl font-extrabold leading-tight tracking-tight text-fg sm:text-6xl lg:text-7xl"
+              style={{ animationDelay: "100ms" }}
             >
               Hi, I&apos;m{" "}
               <span className="bg-gradient-to-r from-accent to-accent-2 bg-clip-text text-transparent">
                 Ricardo
               </span>
-            </motion.h1>
+            </h1>
 
-            {/* Tagline */}
-            <motion.p
-              {...fadeUp(0.2)}
-              className="mb-8 text-xl font-medium text-muted sm:text-2xl"
+            <p
+              className="anim-fade-up mb-8 text-xl font-medium text-muted sm:text-2xl"
+              style={{ animationDelay: "200ms" }}
             >
               {personal.tagline}
-            </motion.p>
+            </p>
 
             {/* Code block */}
-            <motion.div
-              {...fadeUp(0.3)}
-              className="mb-8 w-full max-w-md rounded-xl border border-border bg-surface p-5 text-left shadow-lg"
+            <div
+              className="anim-fade-up mb-8 w-full max-w-md rounded-xl border border-border bg-surface p-5 text-left shadow-lg"
+              style={{ animationDelay: "300ms" }}
             >
               <div className="mb-3 flex gap-1.5">
                 <span className="h-3 w-3 rounded-full bg-red-500" />
@@ -113,12 +92,12 @@ export function Hero() {
                 {"\n"}
                 <span className="text-fg">{"}"}</span>
               </pre>
-            </motion.div>
+            </div>
 
             {/* CTA buttons */}
-            <motion.div
-              {...fadeUp(0.4)}
-              className="mb-8 flex flex-wrap gap-4"
+            <div
+              className="anim-fade-up mb-8 flex flex-wrap gap-4"
+              style={{ animationDelay: "400ms" }}
             >
               <a
                 href="#projects"
@@ -132,52 +111,31 @@ export function Hero() {
               >
                 Get In Touch
               </a>
-            </motion.div>
+            </div>
 
             {/* Social links */}
-            <motion.div
-              {...fadeUp(0.5)}
-              className="flex gap-5"
+            <div
+              className="anim-fade-up flex gap-5"
+              style={{ animationDelay: "500ms" }}
             >
-              <Link
-                href={personal.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="text-muted transition-colors hover:text-accent"
-              >
+              <Link href={personal.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted transition-colors hover:text-accent">
                 <FiGithub size={22} />
               </Link>
-              <Link
-                href={personal.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="text-muted transition-colors hover:text-accent"
-              >
+              <Link href={personal.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted transition-colors hover:text-accent">
                 <FiLinkedin size={22} />
               </Link>
-              <Link
-                href={`mailto:${personal.email}`}
-                aria-label="Email"
-                className="text-muted transition-colors hover:text-accent"
-              >
+              <Link href={`mailto:${personal.email}`} aria-label="Email" className="text-muted transition-colors hover:text-accent">
                 <FiMail size={22} />
               </Link>
-            </motion.div>
+            </div>
           </div>
 
           {/* ── Right column — Profile photo ── */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-            className="relative flex-shrink-0"
+          <div
+            className="anim-scale-in relative flex-shrink-0"
+            style={{ animationDelay: "200ms" }}
           >
-            {/* Outer glow ring */}
             <div className="absolute inset-0 -m-2 rounded-full bg-gradient-to-br from-accent to-accent-2 opacity-40 blur-xl" />
-
-            {/* Gradient border ring */}
             <div className="relative rounded-full p-[3px] bg-gradient-to-br from-accent to-accent-2">
               <div className="relative overflow-hidden rounded-full bg-bg">
                 <Image
@@ -191,7 +149,7 @@ export function Hero() {
                 <div className="pointer-events-none absolute inset-0 rounded-full shadow-[inset_0_0_10px_2px_var(--accent-glow)]" />
               </div>
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

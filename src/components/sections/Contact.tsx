@@ -1,63 +1,38 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { personal } from "@/lib/data";
-
-const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 24 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" },
-  transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const, delay },
-});
+import { useInView } from "@/hooks/useInView";
 
 const links = [
-  {
-    icon: FiMail,
-    label: "Email",
-    value: personal.email,
-    href: `mailto:${personal.email}`,
-  },
-  {
-    icon: FiGithub,
-    label: "GitHub",
-    value: "ricky-antonio",
-    href: personal.github,
-  },
-  {
-    icon: FiLinkedin,
-    label: "LinkedIn",
-    value: "ricardomonterrosa",
-    href: personal.linkedin,
-  },
+  { icon: FiMail,     label: "Email",    value: personal.email,            href: `mailto:${personal.email}` },
+  { icon: FiGithub,   label: "GitHub",   value: "ricky-antonio",           href: personal.github },
+  { icon: FiLinkedin, label: "LinkedIn", value: "ricardomonterrosa",        href: personal.linkedin },
 ];
 
 export function Contact() {
+  const [ref, inView] = useInView();
+
   return (
     <section id="contact" className="relative py-24 lg:py-32">
-      {/* Background glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-accent opacity-5 blur-[100px]"
-      />
+      <div aria-hidden className="pointer-events-none absolute left-1/2 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-accent opacity-5 blur-[100px]" />
 
-      <div className="relative mx-auto max-w-6xl px-6">
+      <div ref={ref} className={`relative mx-auto max-w-6xl px-6 ${inView ? "in-view" : ""}`}>
         <div className="mx-auto max-w-2xl text-center">
 
-          <motion.p {...fadeUp(0)} className="mb-2 font-mono text-sm font-semibold tracking-widest text-accent uppercase">
+          <p className="fade-up mb-2 font-mono text-sm font-semibold tracking-widest text-accent uppercase" style={{ transitionDelay: "0ms" }}>
             // Contact
-          </motion.p>
-          <motion.h2 {...fadeUp(0.05)} className="mb-4 text-4xl font-extrabold tracking-tight text-fg sm:text-5xl">
+          </p>
+          <h2 className="fade-up mb-4 text-4xl font-extrabold tracking-tight text-fg sm:text-5xl" style={{ transitionDelay: "50ms" }}>
             Let&apos;s Build Something Amazing
-          </motion.h2>
-          <motion.p {...fadeUp(0.1)} className="mb-12 text-lg text-muted">
+          </h2>
+          <p className="fade-up mb-12 text-lg text-muted" style={{ transitionDelay: "100ms" }}>
             I&apos;m open to new opportunities, collaborations, and interesting projects.
             Reach out and let&apos;s talk.
-          </motion.p>
+          </p>
 
-          {/* Contact cards */}
-          <motion.div {...fadeUp(0.15)} className="mb-12 grid gap-4 sm:grid-cols-3">
+          <div className="fade-up mb-12 grid gap-4 sm:grid-cols-3" style={{ transitionDelay: "150ms" }}>
             {links.map(({ icon: Icon, label, value, href }) => (
               <Link
                 key={label}
@@ -73,22 +48,20 @@ export function Contact() {
                 <span className="text-sm font-medium text-fg">{value}</span>
               </Link>
             ))}
-          </motion.div>
+          </div>
 
-          {/* Big email CTA */}
-          <motion.a
-            {...fadeUp(0.2)}
+          <a
             href={`mailto:${personal.email}`}
-            className="inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:shadow-accent/30"
+            className="fade-up inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:shadow-accent/30"
+            style={{ transitionDelay: "200ms" }}
           >
             <FiMail size={18} />
             Send Me an Email
-          </motion.a>
+          </a>
 
         </div>
       </div>
 
-      {/* Footer */}
       <div className="mx-auto mt-24 max-w-6xl border-t border-border px-6 pt-8">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <span className="text-sm font-bold text-fg">
