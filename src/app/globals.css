@@ -17,9 +17,9 @@
 .dark {
   --bg: #0d0d14;
   --surface: #13131f;
-  --accent: #a855f7;
+  --accent: #9333ea;
   --accent-2: #ec4899;
-  --accent-glow: #a855f740;
+  --accent-glow: #9333ea40;
   --fg: #f5f5ff;
   --muted: #94a3b8;
   --border: #1e1e30;
@@ -43,8 +43,10 @@
 body {
   background-color: var(--bg);
   color: var(--fg);
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
