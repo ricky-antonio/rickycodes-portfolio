@@ -97,14 +97,14 @@ export function Contact() {
           <p className="text-sm text-muted">
             © {new Date().getFullYear()} Ricardo Monterrosa. All rights reserved.
           </p>
-          <div className="flex gap-4">
-            <Link href={personal.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted transition-colors hover:text-accent">
+          <div className="flex gap-1">
+            <Link href={personal.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="flex h-11 w-11 items-center justify-center text-muted transition-colors hover:text-accent">
               <FiGithub size={18} />
             </Link>
-            <Link href={personal.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted transition-colors hover:text-accent">
+            <Link href={personal.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="flex h-11 w-11 items-center justify-center text-muted transition-colors hover:text-accent">
               <FiLinkedin size={18} />
             </Link>
-            <Link href={`mailto:${personal.email}`} aria-label="Email" className="text-muted transition-colors hover:text-accent">
+            <Link href={`mailto:${personal.email}`} aria-label="Email" className="flex h-11 w-11 items-center justify-center text-muted transition-colors hover:text-accent">
               <FiMail size={18} />
             </Link>
           </div>

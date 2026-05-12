@@ -73,26 +73,26 @@ export function Hero() {
                 <span className="h-3 w-3 rounded-full bg-yellow-400" />
                 <span className="h-3 w-3 rounded-full bg-green-500" />
               </div>
-              <pre className="font-mono text-xs leading-relaxed sm:text-sm">
+              <pre className="font-mono text-xs leading-relaxed sm:text-sm overflow-x-auto">
                 <span className="text-pink-400">const</span>
                 <span className="text-fg"> developer </span>
                 <span className="text-pink-400">=</span>
                 <span className="text-fg"> {"{"}</span>
                 {"\n"}
                 {"  "}
-                <span className="text-accent">firstName</span>
+                <span className="text-violet-700 dark:text-violet-300">firstName</span>
                 <span className="text-muted">: </span>
                 <span className="text-green-400">&quot;Ricardo&quot;</span>
                 <span className="text-muted">,</span>
                 {"\n"}
                 {"  "}
-                <span className="text-accent">lastName</span>
+                <span className="text-violet-700 dark:text-violet-300">lastName</span>
                 <span className="text-muted">: </span>
                 <span className="text-green-400">&quot;Monterrosa&quot;</span>
                 <span className="text-muted">,</span>
                 {"\n"}
                 {"  "}
-                <span className="text-accent">dailyRoutine</span>
+                <span className="text-violet-700 dark:text-violet-300">dailyRoutine</span>
                 <span className="text-muted">: () </span>
                 <span className="text-pink-400">=&gt;</span>
                 <span className="text-fg"> {"{"}</span>

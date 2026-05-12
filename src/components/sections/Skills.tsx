@@ -57,7 +57,7 @@ function SkillBadge({ name, icon }: { name: string; icon: string }) {
       transition={{ duration: 0.15 }}
       className="flex items-center gap-2.5 rounded-lg border border-border bg-surface px-4 py-3 text-sm font-medium text-muted transition-colors hover:border-accent hover:text-fg"
     >
-      <span className="text-base text-accent">{iconMap[icon] ?? null}</span>
+      <span className="text-base text-accent" aria-hidden="true">{iconMap[icon] ?? null}</span>
       {name}
     </motion.div>
   );
