@@ -1,15 +1,11 @@
-"use client";
-
 import { FiMapPin, FiCalendar } from "react-icons/fi";
 import { experience } from "@/lib/data";
-import { useInView } from "@/hooks/useInView";
+import { InViewWrapper } from "@/components/InViewWrapper";
 
 export function Experience() {
-  const [ref, inView] = useInView();
-
   return (
     <section id="experience" className="py-24 lg:py-32">
-      <div ref={ref} className={`mx-auto max-w-6xl px-6 ${inView ? "in-view" : ""}`}>
+      <InViewWrapper className="mx-auto max-w-6xl px-6">
 
         <p className="fade-up mb-2 font-mono text-sm font-semibold tracking-widest text-accent uppercase" style={{ transitionDelay: "0ms" }}>
           // Experience
@@ -69,7 +65,7 @@ export function Experience() {
           ))}
 
         </div>
-      </div>
+      </InViewWrapper>
     </section>
   );
 }

@@ -1,5 +1,3 @@
-"use client";
-
 import {
   SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiRedux, SiShadcnui,
   SiNodedotjs, SiPython, SiPostman, SiMysql, SiMongodb, SiSupabase, SiAppwrite,
@@ -7,7 +5,7 @@ import {
   SiGit, SiGithub, SiSalesforce, SiGreensock, SiThreedotjs, SiWordpress,
 } from "react-icons/si";
 import { skills } from "@/lib/data";
-import { useInView } from "@/hooks/useInView";
+import { InViewWrapper } from "@/components/InViewWrapper";
 
 const iconMap: Record<string, React.ReactNode> = {
   SiTypescript:  <SiTypescript />,
@@ -53,11 +51,9 @@ function SkillBadge({ name, icon }: { name: string; icon: string }) {
 }
 
 export function Skills() {
-  const [ref, inView] = useInView();
-
   return (
     <section id="skills" className="py-24 lg:py-32">
-      <div ref={ref} className={`mx-auto max-w-6xl px-6 ${inView ? "in-view" : ""}`}>
+      <InViewWrapper className="mx-auto max-w-6xl px-6">
 
         <p className="fade-up mb-2 font-mono text-sm font-semibold tracking-widest text-accent uppercase" style={{ transitionDelay: "0ms" }}>
           // Skills
@@ -81,7 +77,7 @@ export function Skills() {
           ))}
         </div>
 
-      </div>
+      </InViewWrapper>
     </section>
   );
 }

@@ -1,8 +1,6 @@
-"use client";
-
 import { FiCode, FiLayers, FiZap } from "react-icons/fi";
 import { personal, education } from "@/lib/data";
-import { useInView } from "@/hooks/useInView";
+import { InViewWrapper } from "@/components/InViewWrapper";
 
 const stats = [
   { icon: FiZap,    value: "3+",  label: "Years Experience" },
@@ -11,11 +9,9 @@ const stats = [
 ];
 
 export function About() {
-  const [ref, inView] = useInView();
-
   return (
     <section id="about" className="relative py-24 lg:py-32">
-      <div ref={ref} className={`mx-auto max-w-6xl px-6 ${inView ? "in-view" : ""}`}>
+      <InViewWrapper className="mx-auto max-w-6xl px-6">
 
         <p className="fade-up mb-2 font-mono text-sm font-semibold tracking-widest text-accent uppercase" style={{ transitionDelay: "0ms" }}>
           // About Me
@@ -67,7 +63,7 @@ export function About() {
           </div>
 
         </div>
-      </div>
+      </InViewWrapper>
     </section>
   );
 }

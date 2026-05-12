@@ -1,9 +1,7 @@
-"use client";
-
 import Link from "next/link";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { personal } from "@/lib/data";
-import { useInView } from "@/hooks/useInView";
+import { InViewWrapper } from "@/components/InViewWrapper";
 
 const links = [
   { icon: FiMail,     label: "Email",    value: personal.email,            href: `mailto:${personal.email}` },
@@ -12,13 +10,11 @@ const links = [
 ];
 
 export function Contact() {
-  const [ref, inView] = useInView();
-
   return (
     <section id="contact" className="relative py-24 lg:py-32">
       <div aria-hidden className="pointer-events-none absolute left-1/2 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-accent opacity-5 blur-[100px]" />
 
-      <div ref={ref} className={`relative mx-auto max-w-6xl px-6 ${inView ? "in-view" : ""}`}>
+      <InViewWrapper className="relative mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
 
           <p className="fade-up mb-2 font-mono text-sm font-semibold tracking-widest text-accent uppercase" style={{ transitionDelay: "0ms" }}>
@@ -60,7 +56,7 @@ export function Contact() {
           </a>
 
         </div>
-      </div>
+      </InViewWrapper>
 
       <div className="mx-auto mt-24 max-w-6xl border-t border-border px-6 pt-8">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
