@@ -139,7 +139,7 @@ export function Hero() {
             <div className="relative rounded-full p-[3px] bg-gradient-to-br from-accent to-accent-2">
               <div className="relative overflow-hidden rounded-full bg-bg">
                 <Image
-                  src="/profile.png"
+                  src="/profile.webp"
                   alt="Ricardo Monterrosa"
                   width={340}
                   height={340}

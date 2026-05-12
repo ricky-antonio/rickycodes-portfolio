@@ -54,7 +54,7 @@ export const projects = [
     tech: ["TypeScript", "React", "Next.js", "TailwindCSS", "ShadCN", "Appwrite"],
     github: "https://github.com/ricky-antonio/store_it",
     demo: "https://store-it.rickycodes.dev/",
-    image: "/projects/storeit.png",
+    image: "/projects/storeit.webp",
   },
   {
     title: "The Wild Oasis",
@@ -64,7 +64,7 @@ export const projects = [
     tech: ["React", "Next.js", "NextAuth", "Supabase", "Tailwind"],
     github: "https://github.com/ricky-antonio/wild-oasis-website",
     demo: "https://wild-oasis.rickycodes.dev/",
-    image: "/projects/wild-oasis.png",
+    image: "/projects/wild-oasis.webp",
   },
   {
     title: "Wild Oasis Admin Dashboard",
@@ -74,7 +74,7 @@ export const projects = [
     tech: ["React", "Supabase", "React Query"],
     github: "https://github.com/ricky-antonio/wild-oasis-admin",
     demo: "https://wild-oasis-admin.rickycodes.dev/",
-    image: "/projects/wild-oasis-admin.png",
+    image: "/projects/wild-oasis-admin.webp",
   },
   {
     title: "Apple iPhone Clone",
@@ -84,7 +84,7 @@ export const projects = [
     tech: ["React", "GSAP", "Three.js", "Tailwind", "Sentry"],
     github: "https://github.com/ricky-antonio/apple-clone",
     demo: "https://apple-iphone.rickycodes.dev/",
-    image: "/projects/apple-clone.png",
+    image: "/projects/apple-clone.webp",
   },
   {
     title: "Brainwave Landing Page",
@@ -94,7 +94,7 @@ export const projects = [
     tech: ["React", "Tailwind"],
     github: "https://github.com/ricky-antonio/brainwave",
     demo: "https://brainwave.rickycodes.dev/",
-    image: "/projects/brainwave.png",
+    image: "/projects/brainwave.webp",
   },
   {
     title: "Cryptoverse Stats & Insights",
@@ -104,7 +104,7 @@ export const projects = [
     tech: ["React", "Redux", "React Router"],
     github: "https://github.com/ricky-antonio/react-api-cryptoverse",
     demo: "https://cryptoverse.rickycodes.dev/",
-    image: "/projects/cryptoverse.png",
+    image: "/projects/cryptoverse.webp",
   },
 ];
 
