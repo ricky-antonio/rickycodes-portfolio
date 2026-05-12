@@ -27,7 +27,7 @@ export function Hero() {
 
             <h1
               className="anim-fade-up mb-3 text-5xl font-extrabold leading-tight tracking-tight text-fg sm:text-6xl lg:text-7xl"
-              style={{ animationDelay: "100ms" }}
+              style={{ animationDelay: "0ms" }}
             >
               Hi, I&apos;m{" "}
               <span className="bg-gradient-to-r from-accent to-accent-2 bg-clip-text text-transparent">
@@ -143,6 +143,7 @@ export function Hero() {
                   alt="Ricardo Monterrosa"
                   width={340}
                   height={340}
+                  sizes="(max-width: 640px) 256px, 320px"
                   className="h-64 w-64 rounded-full object-cover object-top sm:h-80 sm:w-80"
                   priority
                 />
