@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  icons: { icon: "/favicon.svg" },
   title: "Ricardo Monterrosa | Software Engineer",
   description:
     "Software Engineer specializing in React. Building sleek, engaging, and user-focused web experiences.",

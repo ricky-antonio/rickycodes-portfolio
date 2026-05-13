@@ -97,14 +97,14 @@ export const projects = [
     image: "/projects/brainwave.webp",
   },
   {
-    title: "Cryptoverse Stats & Insights",
-    category: "Web App",
+    title: "Unfold - JSON & CSV Formatter",
+    category: "Tools",
     description:
-      "Comprehensive crypto stats app leveraging Coinranking and News APIs, featuring dynamic price charts.",
-    tech: ["React", "Redux", "React Router"],
-    github: "https://github.com/ricky-antonio/react-api-cryptoverse",
-    demo: "https://cryptoverse.rickycodes.dev/",
-    image: "/projects/cryptoverse.webp",
+      "Paste JSON or CSV and instantly pretty-print, explore in a sortable table or interactive tree, and export — all client-side.",
+    tech: ["TypeScript", "React", "Next.js", "TailwindCSS", "ShadCN", "highlight.js"],
+    github: "https://github.com/ricky-antonio/json-formatter",
+    demo: "https://unfold.rickycodes.dev/",
+    image: "/projects/unfold.webp",
   },
 ];
 

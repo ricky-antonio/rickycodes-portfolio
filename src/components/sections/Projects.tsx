@@ -14,7 +14,7 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const, delay },
 });
 
-const categories = ["All", "Web App", "UI/UX"] as const;
+const categories = ["All", "Web App", "UI/UX", "Tools"] as const;
 type Filter = (typeof categories)[number];
 
 export function Projects() {
