@@ -15,23 +15,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rickycodes.dev"),
   icons: { icon: "/favicon.svg" },
-  title: "Ricardo Monterrosa | Software Engineer",
+  title: "Ricardo Monterrosa | Full-Stack Software Engineer",
   description:
-    "Software Engineer specializing in React. Building sleek, engaging, and user-focused web experiences.",
+    "Full-stack Software Engineer specializing in React and Next.js. Building fast, accessible, and polished web applications.",
+  alternates: {
+    canonical: "https://rickycodes.dev",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
-    title: "Ricardo Monterrosa | Software Engineer",
+    title: "Ricardo Monterrosa | Full-Stack Software Engineer",
     description:
-      "Software Engineer specializing in React. Building sleek, engaging, and user-focused web experiences.",
+      "Full-stack Software Engineer specializing in React and Next.js. Building fast, accessible, and polished web applications.",
     url: "https://rickycodes.dev",
     siteName: "Ricardo Monterrosa",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ricardo Monterrosa | Software Engineer",
+    title: "Ricardo Monterrosa | Full-Stack Software Engineer",
     description:
-      "Software Engineer specializing in React. Building sleek, engaging, and user-focused web experiences.",
+      "Full-stack Software Engineer specializing in React and Next.js. Building fast, accessible, and polished web applications.",
   },
 };
 

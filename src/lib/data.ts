@@ -2,7 +2,7 @@ export const personal = {
   name: "Ricardo Monterrosa",
   firstName: "Ricardo",
   title: "Software Engineer",
-  tagline: "Building fast, full-stack web experiences.",
+  tagline: "Full-stack engineer building fast, modern web experiences.",
   email: "rickyantonio.codes@gmail.com",
   github: "https://github.com/ricky-antonio",
   linkedin: "https://www.linkedin.com/in/ricardomonterrosa/",
