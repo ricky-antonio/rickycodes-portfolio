@@ -66,7 +66,7 @@ export function Projects() {
                 className="group flex flex-col overflow-hidden rounded-xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/10"
               >
                 {/* Screenshot */}
-                <div className="relative h-44 w-full overflow-hidden bg-bg">
+                <Link href={project.demo} target="_blank" rel="noopener noreferrer" className="relative h-44 w-full overflow-hidden bg-bg block">
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -78,11 +78,13 @@ export function Projects() {
                   <span className="absolute left-3 top-3 rounded-md bg-bg/80 px-2.5 py-1 text-xs font-semibold text-accent backdrop-blur-sm">
                     {project.category}
                   </span>
-                </div>
+                </Link>
 
                 {/* Content */}
                 <div className="flex flex-1 flex-col gap-3 p-5">
-                  <h3 className="font-bold text-fg">{project.title}</h3>
+                  <Link href={project.demo} target="_blank" rel="noopener noreferrer">
+                    <h3 className="font-bold text-fg hover:text-accent transition-colors">{project.title}</h3>
+                  </Link>
                   <p className="text-sm leading-relaxed text-muted flex-1">{project.description}</p>
 
                   {/* Tech pills */}
