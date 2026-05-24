@@ -83,7 +83,7 @@ export const projects = [
       "Dynamic site blending GSAP animations and cutting-edge 3D graphics technology for engaging experiences.",
     tech: ["React", "GSAP", "Three.js", "Tailwind", "Sentry"],
     github: "https://github.com/ricky-antonio/apple-clone",
-    demo: "https://apple-iphone.rickycodes.dev/",
+    demo: "https://phone-store.rickycodes.dev/",
     image: "/projects/apple-clone.webp",
   },
   {
