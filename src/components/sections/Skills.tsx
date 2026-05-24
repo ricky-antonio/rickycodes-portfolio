@@ -2,7 +2,7 @@ import {
   SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiRedux, SiShadcnui,
   SiNodedotjs, SiPython, SiPostman, SiMysql, SiMongodb, SiSupabase, SiAppwrite,
   SiPandas, SiNumpy, SiPlotly, SiScikitlearn, SiJupyter,
-  SiGit, SiGithub, SiSalesforce, SiGreensock, SiThreedotjs, SiWordpress,
+  SiGit, SiGithub, SiVitest, SiTestinglibrary, SiSalesforce, SiGreensock, SiThreedotjs, SiWordpress,
 } from "react-icons/si";
 import { skills } from "@/lib/data";
 import { InViewWrapper } from "@/components/InViewWrapper";
@@ -26,9 +26,11 @@ const iconMap: Record<string, React.ReactNode> = {
   SiPlotly:      <SiPlotly />,
   SiScikitlearn: <SiScikitlearn />,
   SiJupyter:     <SiJupyter />,
-  SiGit:         <SiGit />,
-  SiGithub:      <SiGithub />,
-  SiSalesforce:  <SiSalesforce />,
+  SiGit:            <SiGit />,
+  SiGithub:         <SiGithub />,
+  SiVitest:         <SiVitest />,
+  SiTestinglibrary: <SiTestinglibrary />,
+  SiSalesforce:     <SiSalesforce />,
   SiGreensock:   <SiGreensock />,
   SiThreedotjs:  <SiThreedotjs />,
   SiWordpress:   <SiWordpress />,

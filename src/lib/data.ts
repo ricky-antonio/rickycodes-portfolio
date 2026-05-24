@@ -38,6 +38,8 @@ export const skills = {
   tools: [
     { name: "Git", icon: "SiGit" },
     { name: "GitHub", icon: "SiGithub" },
+    { name: "Vitest", icon: "SiVitest" },
+    { name: "Testing Library", icon: "SiTestinglibrary" },
     { name: "Salesforce", icon: "SiSalesforce" },
     { name: "GSAP", icon: "SiGreensock" },
     { name: "Three.js", icon: "SiThreedotjs" },
@@ -47,6 +49,16 @@ export const skills = {
 
 export const projects = [
   {
+    title: "Lodestar - Task Management",
+    category: "Web App",
+    description:
+      "Full-stack productivity platform with AI-powered task tools, kanban board, multiple views, and 974 tests at 85% coverage.",
+    tech: ["TypeScript", "Next.js", "Supabase", "ShadCN", "Claude AI", "Vitest"],
+    github: "https://github.com/ricky-antonio/lodestar",
+    demo: "https://lodestar-amber.vercel.app",
+    image: "/projects/lodestar.webp",
+  },
+  {
     title: "StoreIt - Cloud Storage",
     category: "Web App",
     description:
@@ -55,16 +67,6 @@ export const projects = [
     github: "https://github.com/ricky-antonio/store_it",
     demo: "https://store-it.rickycodes.dev/",
     image: "/projects/storeit.webp",
-  },
-  {
-    title: "The Wild Oasis",
-    category: "Web App",
-    description:
-      "Modern booking platform for luxury rentals, featuring user authentication and a secure database.",
-    tech: ["React", "Next.js", "NextAuth", "Supabase", "Tailwind"],
-    github: "https://github.com/ricky-antonio/wild-oasis-website",
-    demo: "https://wild-oasis.rickycodes.dev/",
-    image: "/projects/wild-oasis.webp",
   },
   {
     title: "Wild Oasis Admin Dashboard",
