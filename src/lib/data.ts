@@ -52,7 +52,7 @@ export const projects = [
     title: "Lodestar - Task Management",
     category: "Web App",
     description:
-      "Full-stack productivity platform with AI-powered task tools, kanban board, multiple views, and 974 tests at 85% coverage.",
+      "A Trello competitor with AI-powered task tools — six task views, smart prioritization, auto-scheduling, and a keyboard-first workflow designed to keep you in flow.",
     tech: ["TypeScript", "Next.js", "Supabase", "ShadCN", "Claude AI", "Vitest"],
     github: "https://github.com/ricky-antonio/lodestar",
     demo: "https://lodestar-amber.vercel.app",
