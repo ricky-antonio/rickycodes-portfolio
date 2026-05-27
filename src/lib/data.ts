@@ -59,6 +59,16 @@ export const projects = [
     image: "/projects/lodestar.webp",
   },
   {
+    title: "Bloom - Concept Explorer",
+    category: "Tools",
+    description:
+      "Type any word and watch it bloom — AI expands your idea into an interactive force-directed graph of connected concepts, powered by D3 physics and streaming Claude AI.",
+    tech: ["TypeScript", "Next.js", "D3.js", "TailwindCSS", "Claude AI", "Vitest"],
+    github: "https://github.com/ricky-antonio/bloom",
+    demo: "https://bloom.rickycodes.dev/",
+    image: "/projects/bloom.webp",
+  },
+  {
     title: "StoreIt - Cloud Storage",
     category: "Web App",
     description:
@@ -67,16 +77,6 @@ export const projects = [
     github: "https://github.com/ricky-antonio/store_it",
     demo: "https://store-it.rickycodes.dev/",
     image: "/projects/storeit.webp",
-  },
-  {
-    title: "Wild Oasis Admin Dashboard",
-    category: "Web App",
-    description:
-      "Admin dashboard enabling business management of bookings, analytics, and user insights.",
-    tech: ["React", "Supabase", "React Query"],
-    github: "https://github.com/ricky-antonio/wild-oasis-admin",
-    demo: "https://wild-oasis-admin.rickycodes.dev/",
-    image: "/projects/wild-oasis-admin.webp",
   },
   {
     title: "Apple iPhone Clone",
