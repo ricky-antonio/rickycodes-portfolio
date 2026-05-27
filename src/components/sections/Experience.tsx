@@ -23,10 +23,10 @@ export function Experience() {
               className="fade-up group relative md:pl-10"
               style={{ transitionDelay: `${100 + i * 100}ms` }}
             >
-              <div className="absolute left-0 top-2 hidden h-2.5 w-2.5 -translate-x-[5px] rounded-full border-2 border-accent bg-bg transition-colors group-hover:bg-accent md:block" />
+              <div className="absolute left-0 top-2 hidden h-2.5 w-2.5 translate-x-[-5px] rounded-full border-2 border-accent bg-bg transition-colors group-hover:bg-accent md:block" />
 
               <div className={`flex flex-col gap-6 pb-12 ${i === experience.length - 1 ? "pb-0" : ""}`}>
-                <div className="rounded-xl border border-border bg-surface p-6 transition-all duration-300 group-hover:border-accent group-hover:shadow-lg group-hover:shadow-accent/10">
+                <div className="rounded-xl border border-border bg-surface p-6 transition-[border-color,box-shadow] duration-300 group-hover:border-accent group-hover:shadow-lg group-hover:shadow-accent/10">
 
                   <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
                     <div>
@@ -53,7 +53,7 @@ export function Experience() {
                   <ul className="flex flex-col gap-2.5">
                     {job.bullets.map((bullet) => (
                       <li key={bullet} className="flex gap-3 text-sm leading-relaxed text-muted">
-                        <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                         {bullet}
                       </li>
                     ))}

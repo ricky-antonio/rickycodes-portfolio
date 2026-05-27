@@ -9,8 +9,8 @@ export function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      <div aria-hidden className="pointer-events-none absolute -top-40 -left-40 h-[600px] w-[600px] rounded-full bg-accent opacity-10 blur-[120px]" />
-      <div aria-hidden className="pointer-events-none absolute -bottom-40 -right-20 h-[500px] w-[500px] rounded-full bg-accent-2 opacity-10 blur-[120px]" />
+      <div aria-hidden className="pointer-events-none absolute -top-40 -left-40 h-[300px] w-[300px] rounded-full bg-accent opacity-10 blur-[60px] sm:h-[600px] sm:w-[600px] sm:blur-[120px]" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-40 -right-20 h-[250px] w-[250px] rounded-full bg-accent-2 opacity-10 blur-[60px] sm:h-[500px] sm:w-[500px] sm:blur-[120px]" />
 
       <div className="relative mx-auto w-full max-w-6xl px-6 py-24 lg:py-32">
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-16">
