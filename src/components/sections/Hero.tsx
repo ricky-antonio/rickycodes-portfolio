@@ -132,8 +132,8 @@ export function Hero() {
             style={{ animationDelay: "200ms" }}
           >
             <div className="absolute inset-0 -m-2 rounded-full bg-gradient-to-br from-accent to-accent-2 opacity-40 blur-xl" />
-            <div className="relative rounded-full p-[3px] bg-gradient-to-br from-accent to-accent-2">
-              <div className="relative overflow-hidden rounded-full bg-bg">
+            <div className="relative overflow-hidden rounded-full p-[3px] bg-linear-to-br from-accent to-accent-2">
+              <div className="relative overflow-hidden rounded-full bg-bg transform-[translateZ(0)]">
                 <Image
                   src="/profile.webp"
                   alt="Ricardo Monterrosa"
