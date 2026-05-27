@@ -60,7 +60,7 @@ export const projects = [
   },
   {
     title: "Bloom - Concept Explorer",
-    category: "Tools",
+    category: "Web App",
     description:
       "Type any word and watch it bloom — AI expands your idea into an interactive force-directed graph of connected concepts, powered by D3 physics and streaming Claude AI.",
     tech: ["TypeScript", "Next.js", "D3.js", "TailwindCSS", "Claude AI", "Vitest"],
