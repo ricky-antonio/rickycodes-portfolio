@@ -49,6 +49,16 @@ export const skills = {
 
 export const projects = [
   {
+    title: "Citadel - Urban Intelligence",
+    category: "Web App",
+    description:
+      "Real-time city dashboard aggregating 8 live APIs — weather, transit, air quality, events, and crime — with an AI chat assistant, anomaly detection, and a custom-built orbital map UI.",
+    tech: ["TypeScript", "Next.js", "Mapbox", "Supabase", "Claude AI", "Playwright"],
+    github: "https://github.com/ricky-antonio/citadel",
+    demo: "https://citadel.rickycodes.dev",
+    image: "/projects/citadel.webp",
+  },
+  {
     title: "Lodestar - Task Management",
     category: "Web App",
     description:
@@ -69,16 +79,6 @@ export const projects = [
     image: "/projects/bloom.webp",
   },
   {
-    title: "StoreIt - Cloud Storage",
-    category: "Web App",
-    description:
-      "Cloud storage app built with cutting-edge tech stack, featuring secure file uploads and sleek UI.",
-    tech: ["TypeScript", "React", "Next.js", "TailwindCSS", "ShadCN", "Appwrite"],
-    github: "https://github.com/ricky-antonio/store_it",
-    demo: "https://store-it.rickycodes.dev/",
-    image: "/projects/storeit.webp",
-  },
-  {
     title: "Apple iPhone Clone",
     category: "UI/UX",
     description:
@@ -89,16 +89,6 @@ export const projects = [
     image: "/projects/apple-clone.webp",
   },
   {
-    title: "Brainwave Landing Page",
-    category: "UI/UX",
-    description:
-      "Visually engaging landing page, featuring sleek layout, responsive design, and modern UI.",
-    tech: ["React", "Tailwind"],
-    github: "https://github.com/ricky-antonio/brainwave",
-    demo: "https://brainwave.rickycodes.dev/",
-    image: "/projects/brainwave.webp",
-  },
-  {
     title: "Unfold - JSON & CSV Formatter",
     category: "Tools",
     description:
@@ -107,6 +97,16 @@ export const projects = [
     github: "https://github.com/ricky-antonio/json-formatter",
     demo: "https://unfold.rickycodes.dev/",
     image: "/projects/unfold.webp",
+  },
+  {
+    title: "StoreIt - Cloud Storage",
+    category: "Web App",
+    description:
+      "Cloud storage app built with cutting-edge tech stack, featuring secure file uploads and sleek UI.",
+    tech: ["TypeScript", "React", "Next.js", "TailwindCSS", "ShadCN", "Appwrite"],
+    github: "https://github.com/ricky-antonio/store_it",
+    demo: "https://store-it.rickycodes.dev/",
+    image: "/projects/storeit.webp",
   },
 ];
 
