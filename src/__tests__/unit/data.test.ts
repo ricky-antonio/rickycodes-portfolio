@@ -3,7 +3,7 @@ import { personal, skills, projects, experience, education } from "@/lib/data";
 
 const URL_REGEX = /^https?:\/\/.+/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const VALID_CATEGORIES = ["Web App", "UI/UX"] as const;
+const VALID_CATEGORIES = ["Web App", "UI/UX", "Tools"] as const;
 
 describe("personal", () => {
   it("has all required fields", () => {
@@ -34,9 +34,9 @@ describe("personal", () => {
 });
 
 describe("skills", () => {
-  const categories = ["frontend", "backend", "data", "tools"] as const;
+  const categories = ["ai", "frontend", "backend", "data", "tools"] as const;
 
-  it("has all four categories", () => {
+  it("has all skill categories", () => {
     categories.forEach((cat) => expect(skills[cat]).toBeDefined());
   });
 

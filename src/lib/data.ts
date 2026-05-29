@@ -11,13 +11,20 @@ export const personal = {
 };
 
 export const skills = {
+  ai: [
+    { name: "Claude AI", icon: "SiClaude" },
+    { name: "LLM Integration", icon: "LuBrainCircuit" },
+    { name: "Prompt Engineering", icon: "LuMessageSquareCode" },
+  ],
   frontend: [
     { name: "TypeScript", icon: "SiTypescript" },
     { name: "React", icon: "SiReact" },
     { name: "Next.js", icon: "SiNextdotjs" },
     { name: "Tailwind CSS", icon: "SiTailwindcss" },
+    { name: "shadcn/ui", icon: "SiShadcnui" },
     { name: "Redux", icon: "SiRedux" },
-    { name: "ShadCN", icon: "SiShadcnui" },
+    { name: "GSAP", icon: "SiGreensock" },
+    { name: "Three.js", icon: "SiThreedotjs" },
   ],
   backend: [
     { name: "Node.js", icon: "SiNodedotjs" },
@@ -39,10 +46,9 @@ export const skills = {
     { name: "Git", icon: "SiGit" },
     { name: "GitHub", icon: "SiGithub" },
     { name: "Vitest", icon: "SiVitest" },
-    { name: "Testing Library", icon: "SiTestinglibrary" },
+    { name: "React Testing Library", icon: "SiTestinglibrary" },
+    { name: "Playwright", icon: "LuMonitorCheck" },
     { name: "Salesforce", icon: "SiSalesforce" },
-    { name: "GSAP", icon: "SiGreensock" },
-    { name: "Three.js", icon: "SiThreedotjs" },
     { name: "WordPress", icon: "SiWordpress" },
   ],
 };
@@ -63,7 +69,7 @@ export const projects = [
     category: "Web App",
     description:
       "A Trello competitor with AI-powered task tools — six task views, smart prioritization, auto-scheduling, and a keyboard-first workflow designed to keep you in flow.",
-    tech: ["TypeScript", "Next.js", "Supabase", "ShadCN", "Claude AI", "Vitest"],
+    tech: ["TypeScript", "Next.js", "Supabase", "shadcn/ui", "Claude AI", "Vitest"],
     github: "https://github.com/ricky-antonio/lodestar",
     demo: "https://lodestar-amber.vercel.app",
     image: "/projects/lodestar.webp",
@@ -82,7 +88,7 @@ export const projects = [
     title: "Apple iPhone Clone",
     category: "UI/UX",
     description:
-      "Dynamic site blending GSAP animations and cutting-edge 3D graphics technology for engaging experiences.",
+      "A pixel-faithful Apple iPhone 15 Pro landing page — drag-to-rotate 3D phone models in four titanium finishes, scroll-driven GSAP animations, and a synced video carousel.",
     tech: ["React", "GSAP", "Three.js", "Tailwind", "Sentry"],
     github: "https://github.com/ricky-antonio/apple-clone",
     demo: "https://phone-store.rickycodes.dev/",
@@ -93,7 +99,7 @@ export const projects = [
     category: "Tools",
     description:
       "Paste JSON or CSV and instantly pretty-print, explore in a sortable table or interactive tree, and export — all client-side.",
-    tech: ["TypeScript", "React", "Next.js", "TailwindCSS", "ShadCN", "highlight.js"],
+    tech: ["TypeScript", "React", "Next.js", "TailwindCSS", "shadcn/ui", "highlight.js"],
     github: "https://github.com/ricky-antonio/json-formatter",
     demo: "https://unfold.rickycodes.dev/",
     image: "/projects/unfold.webp",
@@ -102,8 +108,8 @@ export const projects = [
     title: "StoreIt - Cloud Storage",
     category: "Web App",
     description:
-      "Cloud storage app built with cutting-edge tech stack, featuring secure file uploads and sleek UI.",
-    tech: ["TypeScript", "React", "Next.js", "TailwindCSS", "ShadCN", "Appwrite"],
+      "Full-stack cloud storage with OTP email auth, file uploads and sharing, search and sort, and a storage-usage dashboard — built on Appwrite.",
+    tech: ["TypeScript", "React", "Next.js", "TailwindCSS", "shadcn/ui", "Appwrite"],
     github: "https://github.com/ricky-antonio/store_it",
     demo: "https://store-it.rickycodes.dev/",
     image: "/projects/storeit.webp",

@@ -2,8 +2,9 @@ import {
   SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiRedux, SiShadcnui,
   SiNodedotjs, SiPython, SiPostman, SiMysql, SiMongodb, SiSupabase, SiAppwrite,
   SiPandas, SiNumpy, SiPlotly, SiScikitlearn, SiJupyter,
-  SiGit, SiGithub, SiVitest, SiTestinglibrary, SiSalesforce, SiGreensock, SiThreedotjs, SiWordpress,
+  SiGit, SiGithub, SiVitest, SiTestinglibrary, SiClaude, SiSalesforce, SiGreensock, SiThreedotjs, SiWordpress,
 } from "react-icons/si";
+import { BrainCircuit, MessageSquareCode, MonitorCheck } from "lucide-react";
 import { skills } from "@/lib/data";
 import { InViewWrapper } from "@/components/InViewWrapper";
 
@@ -30,6 +31,10 @@ const iconMap: Record<string, React.ReactNode> = {
   SiGithub:         <SiGithub />,
   SiVitest:         <SiVitest />,
   SiTestinglibrary: <SiTestinglibrary />,
+  SiClaude:         <SiClaude />,
+  LuBrainCircuit:      <BrainCircuit size={16} />,
+  LuMessageSquareCode: <MessageSquareCode size={16} />,
+  LuMonitorCheck:      <MonitorCheck size={16} />,
   SiSalesforce:     <SiSalesforce />,
   SiGreensock:   <SiGreensock />,
   SiThreedotjs:  <SiThreedotjs />,
@@ -37,10 +42,11 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 const categories = [
+  { label: "AI & LLMs",          key: "ai"       as const },
   { label: "Frontend",           key: "frontend" as const },
   { label: "Backend & Database", key: "backend"  as const },
   { label: "Data & Analytics",   key: "data"     as const },
-  { label: "Tools & Other",      key: "tools"    as const },
+  { label: "Tools & Testing",    key: "tools"    as const },
 ];
 
 function SkillBadge({ name, icon }: { name: string; icon: string }) {
