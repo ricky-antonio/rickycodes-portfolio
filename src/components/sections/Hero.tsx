@@ -33,7 +33,7 @@ export function Hero() {
               <span className="bg-gradient-to-r from-accent to-accent-2 bg-clip-text text-transparent">
                 Ricardo
               </span>
-              <span className="mt-3 block text-xl font-medium text-muted sm:text-2xl">
+              <span className="mt-3 block text-xl font-medium tracking-wide text-muted sm:text-2xl">
                 {personal.tagline}
               </span>
             </h1>
