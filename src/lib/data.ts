@@ -6,7 +6,7 @@ export const personal = {
   email: "rickyantonio.codes@gmail.com",
   github: "https://github.com/ricky-antonio",
   linkedin: "https://www.linkedin.com/in/ricardomonterrosa/",
-  bio: "A full-stack engineer with a passion for crafting sleek, performant, and user-focused web experiences. I work across the entire stack — from pixel-perfect UIs to scalable APIs — combining technical depth with a sharp eye for design. When I'm not shipping, you'll find me on the mats training jiu jitsu.",
+  bio: "A full-stack engineer building AI-integrated products and high-performance web applications, from LLM-powered tools to real-time dashboards backed by live APIs. I work across the entire stack, combining engineering depth with a sharp eye for design. When I'm not shipping, you'll find me on the mats training jiu jitsu.",
   hobbies: ["eat...", "code...", "jiu jitsu...", "sleep...", "repeat..."],
 };
 
@@ -125,20 +125,21 @@ export const experience = [
     period: "2025 – Present",
     bullets: [
       "Developed and deployed custom performance dashboards using Python (Pandas, NumPy, Seaborn) to track depot and driver metrics, turning raw operational data into actionable performance targets.",
+      "Monitor and investigate experimental AV software anomalies, sensor triggers, and fallback logic to provide engineering teams with structured, reproducible data for system refinement.",
       "Lead strategic planning and labor forecasting to meet client mission demands, managing shift coordination and workforce scheduling to ensure 100% operational readiness in a high-growth autonomous vehicle environment.",
       "Audit and implement global process standards, identifying and resolving dispatch bottlenecks to improve mission completion rates.",
-      "Monitor and investigate experimental AV software anomalies, sensor triggers, and fallback logic to provide engineering teams with structured, reproducible data for system refinement.",
     ],
   },
   {
     role: "Web Developer",
+    project: "lji.org & mag.lji.org",
     company: "La Jolla Institute",
     location: "San Diego, CA",
     period: "2022 – 2025",
     bullets: [
-      "Architected automated workflows using Salesforce and custom scripts, reducing manual work hours and improving departmental consistency.",
-      "Managed the end-to-end operational lifecycle of web systems, integrating backend data sources via APIs to maintain real-time data integrity.",
-      "Acted as the sole technical owner for multiple departments, coordinating timelines and deliverables for high-impact web infrastructure projects.",
+      "Built lji.org and mag.lji.org from scratch — the full public web presence for a biomedical research nonprofit with 24+ faculty labs — integrating external APIs for event feeds, research databases, and real-time institutional data.",
+      "Engineered Salesforce automation workflows that eliminated recurring manual processes across departments, reducing operational overhead and improving cross-team consistency.",
+      "Served as the sole technical owner for all web infrastructure across multiple departments for 3 years, maintaining consistent uptime for a high-visibility research institution.",
     ],
   },
   {
@@ -178,10 +179,5 @@ export const education = [
     school: "DeVry University",
     degree: "Bachelor of Science, Computer Engineering",
     location: "Pomona, CA",
-  },
-  {
-    school: "Nucamp Coding Bootcamp",
-    degree: "Full Stack Web Development",
-    location: "San Diego, CA",
   },
 ];

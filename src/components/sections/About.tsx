@@ -3,7 +3,7 @@ import { personal, education } from "@/lib/data";
 import { InViewWrapper } from "@/components/InViewWrapper";
 
 const stats = [
-  { icon: FiZap,    value: "3+",  label: "Years Experience" },
+  { icon: FiZap,    value: "4+",  label: "Years Experience" },
   { icon: FiLayers, value: "10+", label: "Projects Shipped" },
   { icon: FiCode,   value: "TS",  label: "TypeScript First" },
 ];
