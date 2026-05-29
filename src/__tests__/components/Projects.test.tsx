@@ -28,7 +28,7 @@ vi.mock("react-icons/fi", () => ({
 
 import { Projects } from "@/components/sections/Projects";
 
-const webAppProjects = projects.filter((p) => p.category === "Web App");
+const aiProjects = projects.filter((p) => p.category === "AI");
 const uiuxProjects = projects.filter((p) => p.category === "UI/UX");
 
 describe("Projects component", () => {
@@ -40,8 +40,10 @@ describe("Projects component", () => {
   it("renders all filter buttons", () => {
     render(<Projects />);
     expect(screen.getByRole("button", { name: "All" })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Web App" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "AI" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Full-Stack" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "UI/UX" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Tools" })).toBeInTheDocument();
   });
 
   it("shows all projects by default", () => {
@@ -51,11 +53,11 @@ describe("Projects component", () => {
     });
   });
 
-  it("filter to Web App shows only Web App projects", () => {
+  it("filter to AI shows only AI projects", () => {
     render(<Projects />);
-    fireEvent.click(screen.getByRole("button", { name: "Web App" }));
+    fireEvent.click(screen.getByRole("button", { name: "AI" }));
 
-    webAppProjects.forEach((p) => expect(screen.getByText(p.title)).toBeInTheDocument());
+    aiProjects.forEach((p) => expect(screen.getByText(p.title)).toBeInTheDocument());
     uiuxProjects.forEach((p) => expect(screen.queryByText(p.title)).not.toBeInTheDocument());
   });
 
@@ -64,12 +66,12 @@ describe("Projects component", () => {
     fireEvent.click(screen.getByRole("button", { name: "UI/UX" }));
 
     uiuxProjects.forEach((p) => expect(screen.getByText(p.title)).toBeInTheDocument());
-    webAppProjects.forEach((p) => expect(screen.queryByText(p.title)).not.toBeInTheDocument());
+    aiProjects.forEach((p) => expect(screen.queryByText(p.title)).not.toBeInTheDocument());
   });
 
   it("switching back to All restores all projects", () => {
     render(<Projects />);
-    fireEvent.click(screen.getByRole("button", { name: "Web App" }));
+    fireEvent.click(screen.getByRole("button", { name: "AI" }));
     fireEvent.click(screen.getByRole("button", { name: "All" }));
 
     projects.forEach((p) => expect(screen.getByText(p.title)).toBeInTheDocument());

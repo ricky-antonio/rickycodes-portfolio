@@ -56,7 +56,7 @@ export const skills = {
 export const projects = [
   {
     title: "Citadel - Urban Intelligence",
-    category: "Web App",
+    category: "AI",
     description:
       "Real-time city dashboard aggregating 8 live APIs — weather, transit, air quality, events, and crime — with an AI chat assistant, anomaly detection, and a custom-built orbital map UI.",
     tech: ["TypeScript", "Next.js", "Mapbox", "Supabase", "Claude AI", "Playwright"],
@@ -66,7 +66,7 @@ export const projects = [
   },
   {
     title: "Lodestar - Task Management",
-    category: "Web App",
+    category: "AI",
     description:
       "A Trello competitor with AI-powered task tools — six task views, smart prioritization, auto-scheduling, and a keyboard-first workflow designed to keep you in flow.",
     tech: ["TypeScript", "Next.js", "Supabase", "shadcn/ui", "Claude AI", "Vitest"],
@@ -76,7 +76,7 @@ export const projects = [
   },
   {
     title: "Bloom - Concept Explorer",
-    category: "Web App",
+    category: "AI",
     description:
       "Type any word and watch it bloom — AI expands your idea into an interactive force-directed graph of connected concepts, powered by D3 physics and streaming Claude AI.",
     tech: ["TypeScript", "Next.js", "D3.js", "TailwindCSS", "Claude AI", "Vitest"],
@@ -106,7 +106,7 @@ export const projects = [
   },
   {
     title: "StoreIt - Cloud Storage",
-    category: "Web App",
+    category: "Full-Stack",
     description:
       "Full-stack cloud storage with OTP email auth, file uploads and sharing, search and sort, and a storage-usage dashboard — built on Appwrite.",
     tech: ["TypeScript", "React", "Next.js", "TailwindCSS", "shadcn/ui", "Appwrite"],

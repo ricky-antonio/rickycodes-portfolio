@@ -1,7 +1,10 @@
 import { describe, it, expect } from "vitest";
 import { projects } from "@/lib/data";
 
-function filterProjects(filter: "All" | "Web App" | "UI/UX" | "Tools") {
+type Filter = "All" | "AI" | "Full-Stack" | "UI/UX" | "Tools";
+const CATEGORIES: Exclude<Filter, "All">[] = ["AI", "Full-Stack", "UI/UX", "Tools"];
+
+function filterProjects(filter: Filter) {
   return filter === "All" ? projects : projects.filter((p) => p.category === filter);
 }
 
@@ -10,35 +13,30 @@ describe("projects filter logic", () => {
     expect(filterProjects("All").length).toBe(projects.length);
   });
 
-  it("Web App returns only Web App projects", () => {
-    const result = filterProjects("Web App");
-    expect(result.length).toBeGreaterThan(0);
-    result.forEach((p) => expect(p.category).toBe("Web App"));
+  it("each category returns only its own projects", () => {
+    CATEGORIES.forEach((cat) => {
+      const result = filterProjects(cat);
+      expect(result.length, `${cat} has no projects`).toBeGreaterThan(0);
+      result.forEach((p) => expect(p.category).toBe(cat));
+    });
   });
 
-  it("UI/UX returns only UI/UX projects", () => {
-    const result = filterProjects("UI/UX");
-    expect(result.length).toBeGreaterThan(0);
-    result.forEach((p) => expect(p.category).toBe("UI/UX"));
+  it("AI groups the Claude-powered projects", () => {
+    const ai = filterProjects("AI").map((p) => p.title);
+    expect(ai).toContain("Citadel - Urban Intelligence");
+    expect(ai).toContain("Lodestar - Task Management");
+    expect(ai).toContain("Bloom - Concept Explorer");
   });
 
-  it("Tools returns only Tools projects", () => {
-    const result = filterProjects("Tools");
-    expect(result.length).toBeGreaterThan(0);
-    result.forEach((p) => expect(p.category).toBe("Tools"));
-  });
-
-  it("Web App + UI/UX + Tools totals all projects", () => {
-    const webApp = filterProjects("Web App").length;
-    const uiux = filterProjects("UI/UX").length;
-    const tools = filterProjects("Tools").length;
-    expect(webApp + uiux + tools).toBe(projects.length);
+  it("every category combined totals all projects", () => {
+    const total = CATEGORIES.reduce((sum, cat) => sum + filterProjects(cat).length, 0);
+    expect(total).toBe(projects.length);
   });
 
   it("filtered results are a subset of all projects", () => {
     const allTitles = new Set(projects.map((p) => p.title));
-    filterProjects("Web App").forEach((p) => expect(allTitles.has(p.title)).toBe(true));
-    filterProjects("UI/UX").forEach((p) => expect(allTitles.has(p.title)).toBe(true));
-    filterProjects("Tools").forEach((p) => expect(allTitles.has(p.title)).toBe(true));
+    CATEGORIES.forEach((cat) =>
+      filterProjects(cat).forEach((p) => expect(allTitles.has(p.title)).toBe(true))
+    );
   });
 });

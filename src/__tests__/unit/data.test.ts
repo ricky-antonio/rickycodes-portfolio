@@ -3,7 +3,7 @@ import { personal, skills, projects, experience, education } from "@/lib/data";
 
 const URL_REGEX = /^https?:\/\/.+/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const VALID_CATEGORIES = ["Web App", "UI/UX", "Tools"] as const;
+const VALID_CATEGORIES = ["AI", "Full-Stack", "UI/UX", "Tools"] as const;
 
 describe("personal", () => {
   it("has all required fields", () => {
