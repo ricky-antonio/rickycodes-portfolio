@@ -17,7 +17,7 @@ export function Contact() {
       <InViewWrapper className="relative mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
 
-          <p className="fade-up mb-2 font-mono text-sm font-semibold tracking-widest text-accent uppercase" style={{ transitionDelay: "0ms" }}>
+          <p className="fade-up mb-2 font-mono text-sm font-semibold tracking-widest text-accent-text uppercase" style={{ transitionDelay: "0ms" }}>
             // Contact
           </p>
           <h2 className="fade-up mb-4 text-4xl font-extrabold tracking-tight text-fg sm:text-5xl" style={{ transitionDelay: "50ms" }}>
@@ -61,7 +61,7 @@ export function Contact() {
       <div className="mx-auto mt-24 max-w-6xl border-t border-border px-6 pt-8">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <span className="text-sm font-bold text-fg">
-            RM<span className="text-accent">.</span>
+            RM<span className="text-accent-text">.</span>
           </span>
           <p className="text-sm text-muted">
             © {new Date().getFullYear()} Ricardo Monterrosa. All rights reserved.

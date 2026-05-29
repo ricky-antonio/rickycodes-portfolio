@@ -48,7 +48,7 @@ export function Navbar() {
             href="#hero"
             className="text-lg font-extrabold tracking-tight text-fg transition-colors hover:text-accent"
           >
-            RM<span className="text-accent">.</span>
+            RM<span className="text-accent-text">.</span>
           </a>
 
           <ul className="hidden items-center gap-8 md:flex">

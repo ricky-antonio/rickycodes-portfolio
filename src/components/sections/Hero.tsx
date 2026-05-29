@@ -19,7 +19,7 @@ export function Hero() {
           <div className="flex flex-1 flex-col items-center text-center lg:items-start lg:text-left">
 
             <p
-              className="anim-fade-up mb-4 font-mono text-sm font-semibold tracking-widest text-accent uppercase"
+              className="anim-fade-up mb-4 font-mono text-sm font-semibold tracking-widest text-accent-text uppercase"
               style={{ animationDelay: "0ms" }}
             >
               // Software Engineer
@@ -38,10 +38,11 @@ export function Hero() {
               </span>
             </h1>
 
-            {/* Code block */}
+            {/* Code block — LCP element on mobile, so it animates in the first
+                paint batch (no delay) to keep its LCP timestamp early. */}
             <div
               className="anim-fade-up mb-8 w-full max-w-md rounded-xl border border-border bg-surface p-5 text-left shadow-lg"
-              style={{ animationDelay: "300ms" }}
+              style={{ animationDelay: "0ms" }}
             >
               <div className="mb-3 flex gap-1.5">
                 <span className="h-3 w-3 rounded-full bg-red-500" />

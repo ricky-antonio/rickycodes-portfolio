@@ -13,7 +13,7 @@ export function About() {
     <section id="about" className="relative py-24 lg:py-32">
       <InViewWrapper className="mx-auto max-w-6xl px-6">
 
-        <p className="fade-up mb-2 font-mono text-sm font-semibold tracking-widest text-accent uppercase" style={{ transitionDelay: "0ms" }}>
+        <p className="fade-up mb-2 font-mono text-sm font-semibold tracking-widest text-accent-text uppercase" style={{ transitionDelay: "0ms" }}>
           // About Me
         </p>
         <h2 className="fade-up mb-16 text-4xl font-extrabold tracking-tight text-fg sm:text-5xl" style={{ transitionDelay: "50ms" }}>
@@ -57,7 +57,7 @@ export function About() {
                 <div className="absolute left-0 top-6 bottom-6 w-[3px] rounded-full bg-gradient-to-b from-accent to-accent-2 opacity-0 transition-opacity group-hover:opacity-100" />
                 <span className="text-base font-bold text-fg">{edu.school}</span>
                 <span className="text-sm text-muted">{edu.degree}</span>
-                <span className="mt-1 text-xs font-medium text-accent">{edu.location}</span>
+                <span className="mt-1 text-xs font-medium text-accent-text">{edu.location}</span>
               </div>
             ))}
           </div>

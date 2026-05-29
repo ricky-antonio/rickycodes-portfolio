@@ -7,7 +7,7 @@ export function Experience() {
     <section id="experience" className="py-24 lg:py-32">
       <InViewWrapper className="mx-auto max-w-6xl px-6">
 
-        <p className="fade-up mb-2 font-mono text-sm font-semibold tracking-widest text-accent uppercase" style={{ transitionDelay: "0ms" }}>
+        <p className="fade-up mb-2 font-mono text-sm font-semibold tracking-widest text-accent-text uppercase" style={{ transitionDelay: "0ms" }}>
           // Experience
         </p>
         <h2 className="fade-up mb-16 text-4xl font-extrabold tracking-tight text-fg sm:text-5xl" style={{ transitionDelay: "50ms" }}>
@@ -33,7 +33,7 @@ export function Experience() {
                       <h3 className="text-lg font-bold text-fg">
                         {job.role}
                         {"project" in job && job.project && (
-                          <span className="text-accent"> — {job.project}</span>
+                          <span className="text-accent-text"> — {job.project}</span>
                         )}
                       </h3>
                       <span className="text-base font-semibold text-muted">{job.company}</span>

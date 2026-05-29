@@ -28,7 +28,7 @@ export function Projects() {
     <section id="projects" className="py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6">
 
-        <motion.p {...fadeUp(0)} className="mb-2 font-mono text-sm font-semibold tracking-widest text-accent uppercase">
+        <motion.p {...fadeUp(0)} className="mb-2 font-mono text-sm font-semibold tracking-widest text-accent-text uppercase">
           // Projects
         </motion.p>
         <motion.h2 {...fadeUp(0.05)} className="mb-10 text-4xl font-extrabold tracking-tight text-fg sm:text-5xl">
@@ -74,7 +74,7 @@ export function Projects() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   {/* Category badge */}
-                  <span className="absolute left-3 top-3 rounded-md bg-bg/80 px-2.5 py-1 text-xs font-semibold text-accent backdrop-blur-sm">
+                  <span className="absolute left-3 top-3 rounded-md bg-bg/80 px-2.5 py-1 text-xs font-semibold text-accent-text backdrop-blur-sm">
                     {project.category}
                   </span>
                 </Link>

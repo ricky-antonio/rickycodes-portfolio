@@ -63,7 +63,7 @@ export function Skills() {
     <section id="skills" className="py-24 lg:py-32">
       <InViewWrapper className="mx-auto max-w-6xl px-6">
 
-        <p className="fade-up mb-2 font-mono text-sm font-semibold tracking-widest text-accent uppercase" style={{ transitionDelay: "0ms" }}>
+        <p className="fade-up mb-2 font-mono text-sm font-semibold tracking-widest text-accent-text uppercase" style={{ transitionDelay: "0ms" }}>
           // Skills
         </p>
         <h2 className="fade-up mb-16 text-4xl font-extrabold tracking-tight text-fg sm:text-5xl" style={{ transitionDelay: "50ms" }}>
