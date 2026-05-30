@@ -33,8 +33,8 @@ export function Contact() {
               <Link
                 key={label}
                 href={href}
-                target={href.startsWith("mailto") ? undefined : "_blank"}
-                rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex flex-col items-center gap-3 rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-lg hover:shadow-accent/10"
               >
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-bg text-accent transition-colors group-hover:bg-accent group-hover:text-white">
@@ -68,7 +68,7 @@ export function Contact() {
             <Link href={personal.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="flex h-11 w-11 items-center justify-center text-muted transition-colors hover:text-accent">
               <FiLinkedin size={18} />
             </Link>
-            <Link href={`mailto:${personal.email}`} aria-label="Email" className="flex h-11 w-11 items-center justify-center text-muted transition-colors hover:text-accent">
+            <Link href="#contact" aria-label="Contact" className="flex h-11 w-11 items-center justify-center text-muted transition-colors hover:text-accent">
               <FiMail size={18} />
             </Link>
           </div>

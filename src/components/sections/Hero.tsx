@@ -132,7 +132,7 @@ export function Hero() {
               <Link href={personal.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted transition-colors hover:text-accent">
                 <FiLinkedin size={22} />
               </Link>
-              <Link href={`mailto:${personal.email}`} aria-label="Email" className="text-muted transition-colors hover:text-accent">
+              <Link href="#contact" aria-label="Contact" className="text-muted transition-colors hover:text-accent">
                 <FiMail size={22} />
               </Link>
             </div>
