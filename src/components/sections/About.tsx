@@ -1,11 +1,11 @@
-import { FiCode, FiLayers, FiZap } from "react-icons/fi";
+import { FiCpu, FiLayers, FiZap } from "react-icons/fi";
 import { personal, education } from "@/lib/data";
 import { InViewWrapper } from "@/components/InViewWrapper";
 
 const stats = [
   { icon: FiZap,    value: "4+",  label: "Years Experience" },
   { icon: FiLayers, value: "10+", label: "Projects Shipped" },
-  { icon: FiCode,   value: "TS",  label: "TypeScript First" },
+  { icon: FiCpu,    value: "3",   label: "AI Apps Live" },
 ];
 
 export function About() {

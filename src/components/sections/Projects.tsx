@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
-import { projects } from "@/lib/data";
+import { projects, personal } from "@/lib/data";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -122,6 +122,18 @@ export function Projects() {
             ))}
           </AnimatePresence>
         </div>
+
+        <motion.div {...fadeUp(0.3)} className="mt-12 text-center">
+          <Link
+            href={personal.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-muted transition-all hover:border-accent hover:text-accent"
+          >
+            <FiGithub size={16} />
+            View all projects on GitHub
+          </Link>
+        </motion.div>
 
       </div>
     </section>

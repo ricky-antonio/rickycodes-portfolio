@@ -18,6 +18,17 @@ export function Hero() {
           {/* ── Left column ── */}
           <div className="flex flex-1 flex-col items-center text-center lg:items-start lg:text-left">
 
+            <div
+              className="anim-fade-up mb-5 inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-4 py-1.5 text-xs font-semibold text-green-400"
+              style={{ animationDelay: "0ms" }}
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+              </span>
+              Available for new roles
+            </div>
+
             <p
               className="anim-fade-up mb-4 font-mono text-sm font-semibold tracking-widest text-accent-text uppercase"
               style={{ animationDelay: "0ms" }}
