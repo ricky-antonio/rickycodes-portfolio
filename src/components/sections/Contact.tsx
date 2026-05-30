@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { personal } from "@/lib/data";
 import { InViewWrapper } from "@/components/InViewWrapper";
+import { ContactForm } from "@/components/ContactForm";
 
 const links = [
   { icon: FiMail,     label: "Email",    value: personal.email,            href: `mailto:${personal.email}` },
@@ -46,14 +47,9 @@ export function Contact() {
             ))}
           </div>
 
-          <a
-            href={`mailto:${personal.email}`}
-            className="fade-up inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:shadow-accent/30"
-            style={{ transitionDelay: "200ms" }}
-          >
-            <FiMail size={18} />
-            Send Me an Email
-          </a>
+          <div className="fade-up w-full text-left" style={{ transitionDelay: "200ms" }}>
+            <ContactForm />
+          </div>
 
         </div>
       </InViewWrapper>
