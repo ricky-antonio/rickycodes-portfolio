@@ -148,8 +148,8 @@ export const experience = [
     location: "San Diego, CA",
     period: "2021 – 2022",
     bullets: [
-      "Redesigned internal development workflows, increasing team delivery speed and consistency across technical solutions.",
-      "Managed and mentored junior team members, focusing on skill development and the adoption of scalable team practices.",
+      "Built client websites and CMS-integrated lead generation landing pages for local businesses, including an insurance campaign wired to a backend CMS for real-time lead capture and management.",
+      "Overhauled internal development workflows and mentored junior developers, improving delivery speed and consistency across client projects.",
     ],
   },
   {
