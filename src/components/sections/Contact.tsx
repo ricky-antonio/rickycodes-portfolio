@@ -5,9 +5,8 @@ import { InViewWrapper } from "@/components/InViewWrapper";
 import { ContactForm } from "@/components/ContactForm";
 
 const links = [
-  { icon: FiMail,     label: "Email",    value: personal.email,            href: `mailto:${personal.email}` },
-  { icon: FiGithub,   label: "GitHub",   value: "ricky-antonio",           href: personal.github },
-  { icon: FiLinkedin, label: "LinkedIn", value: "ricardomonterrosa",        href: personal.linkedin },
+  { icon: FiGithub,   label: "GitHub",   value: "ricky-antonio",    href: personal.github },
+  { icon: FiLinkedin, label: "LinkedIn", value: "ricardomonterrosa", href: personal.linkedin },
 ];
 
 export function Contact() {
@@ -29,7 +28,7 @@ export function Contact() {
             Reach out and let&apos;s talk.
           </p>
 
-          <div className="fade-up mb-12 grid gap-4 sm:grid-cols-3" style={{ transitionDelay: "150ms" }}>
+          <div className="fade-up mb-12 grid gap-4 sm:grid-cols-2" style={{ transitionDelay: "150ms" }}>
             {links.map(({ icon: Icon, label, value, href }) => (
               <Link
                 key={label}
