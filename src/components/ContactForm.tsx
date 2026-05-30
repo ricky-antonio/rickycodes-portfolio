@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import { useFormStatus } from "react-dom";
 import { FiSend, FiCheckCircle, FiAlertCircle } from "react-icons/fi";
 import { sendContactEmail, type ContactState } from "@/app/actions/contact";
@@ -21,6 +21,11 @@ function SubmitButton() {
 
 export function ContactForm() {
   const [state, action] = useActionState<ContactState, FormData>(sendContactEmail, null);
+  const timestampRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (timestampRef.current) timestampRef.current.value = Date.now().toString();
+  }, []);
 
   if (state?.success) {
     return (
@@ -34,8 +39,13 @@ export function ContactForm() {
 
   return (
     <form action={action} className="flex flex-col gap-4 text-left">
-      {/* Honeypot — hidden from real users, bots fill it out */}
-      <input type="text" name="_trap" className="hidden" tabIndex={-1} autoComplete="off" />
+      {/* Honeypot — off-screen, not display:none (bots detect that) */}
+      <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 0, height: 0, overflow: "hidden" }}>
+        <label htmlFor="_trap">Leave this field empty</label>
+        <input type="text" id="_trap" name="_trap" tabIndex={-1} autoComplete="off" />
+      </div>
+      {/* Timing token — set on mount, bots submit before this is populated */}
+      <input ref={timestampRef} type="hidden" name="_t" />
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="flex flex-col gap-1.5">

@@ -1,6 +1,12 @@
 "use server";
 
+import { headers } from "next/headers";
 import { Resend } from "resend";
+
+// In-memory rate limit: max 3 submissions per IP per 10 minutes
+const rateLimit = new Map<string, { count: number; resetAt: number }>();
+const WINDOW_MS = 10 * 60 * 1000;
+const MAX_PER_WINDOW = 3;
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -98,12 +104,38 @@ export async function sendContactEmail(
   const email    = formData.get("email")?.toString().trim()   ?? "";
   const message  = formData.get("message")?.toString().trim() ?? "";
   const honeypot = formData.get("_trap")?.toString();
+  const ts       = formData.get("_t")?.toString();
 
-  if (honeypot) return { success: false, error: "Invalid submission." };
+  // Silently succeed for bots — don't reveal detection
+  if (honeypot) return { success: true };
+
+  // Reject submissions faster than a human can type (< 1.5s)
+  const elapsed = ts ? Date.now() - parseInt(ts, 10) : 0;
+  if (elapsed < 1500) return { success: true };
+
+  // Rate limit by IP: max 3 per 10 minutes
+  const headerList = await headers();
+  const ip = headerList.get("x-forwarded-for")?.split(",")[0]?.trim()
+          ?? headerList.get("x-real-ip")
+          ?? "unknown";
+  const now = Date.now();
+  const record = rateLimit.get(ip);
+  if (record && now < record.resetAt) {
+    if (record.count >= MAX_PER_WINDOW)
+      return { success: false, error: "Too many submissions. Please try again later." };
+    record.count++;
+  } else {
+    rateLimit.set(ip, { count: 1, resetAt: now + WINDOW_MS });
+  }
+
   if (!name || !email || !message)
     return { success: false, error: "All fields are required." };
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
     return { success: false, error: "Please enter a valid email address." };
+  if (message.length > 5000)
+    return { success: false, error: "Message is too long." };
+  if ((message.match(/https?:\/\//gi) ?? []).length > 2)
+    return { success: false, error: "Message contains too many links." };
 
   try {
     await resend.emails.send({
