@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# rickycodes.dev — Personal Portfolio
 
-## Getting Started
+A fast, accessible, single-page portfolio built with the modern React stack — featuring my projects, experience, and a hardened contact form. Designed with as much care for performance, accessibility, and SEO as for visual polish.
 
-First, run the development server:
+**Live:** [rickycodes.dev](https://rickycodes.dev)
+
+## Stack
+
+- **Framework:** Next.js (App Router) + React
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Testing:** Vitest + React Testing Library (unit/component), Playwright (e2e)
+- **Deployment:** Vercel
+
+## Highlights
+
+- **Tested** — unit, component, and end-to-end suites covering accessibility (axe-core), links, performance, responsiveness, and SEO
+- **Accessible** — built to accessibility standards and verified with automated a11y tests
+- **SEO-ready** — dynamic Open Graph image generation, sitemap, robots, and canonical metadata
+- **Hardened contact form** — server-side validation, rate limiting, honeypot, and timing checks against spam
+- **Performance-focused** — optimized images (next/image, webp), minimal client JS, fast LCP
+
+## Running locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the dev server |
+| `npm run build` | Production build |
+| `npm run test` | Run unit + component tests (Vitest) |
+| `npm run test:e2e` | Run end-to-end tests (Playwright) |
+| `npm run test:all` | Run the full suite |
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© Ricardo Monterrosa. All rights reserved.
