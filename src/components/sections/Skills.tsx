@@ -1,7 +1,7 @@
 import {
   SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiRedux, SiShadcnui,
   SiNodedotjs, SiPython, SiPostman, SiMysql, SiMongodb, SiSupabase, SiAppwrite,
-  SiPandas, SiNumpy, SiPlotly, SiScikitlearn, SiJupyter,
+  SiNumpy, SiPlotly, SiGooglecolab,
   SiGit, SiGithub, SiVitest, SiTestinglibrary, SiClaude, SiSalesforce, SiGreensock, SiThreedotjs, SiWordpress,
 } from "react-icons/si";
 import { BrainCircuit, MessageSquareCode, MonitorCheck } from "lucide-react";
@@ -22,11 +22,9 @@ const iconMap: Record<string, React.ReactNode> = {
   SiMongodb:     <SiMongodb />,
   SiSupabase:    <SiSupabase />,
   SiAppwrite:    <SiAppwrite />,
-  SiPandas:      <SiPandas />,
-  SiNumpy:       <SiNumpy />,
-  SiPlotly:      <SiPlotly />,
-  SiScikitlearn: <SiScikitlearn />,
-  SiJupyter:     <SiJupyter />,
+  SiNumpy:        <SiNumpy />,
+  SiPlotly:       <SiPlotly />,
+  SiGooglecolab:  <SiGooglecolab />,
   SiGit:            <SiGit />,
   SiGithub:         <SiGithub />,
   SiVitest:         <SiVitest />,

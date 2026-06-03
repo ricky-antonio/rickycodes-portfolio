@@ -33,7 +33,7 @@ export function Hero() {
               className="anim-fade-up mb-4 font-mono text-sm font-semibold tracking-widest text-accent-text uppercase"
               style={{ animationDelay: "0ms" }}
             >
-              // Software Engineer
+              // Frontend Developer
             </p>
 
             <h1

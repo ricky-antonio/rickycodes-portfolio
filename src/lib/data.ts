@@ -1,12 +1,12 @@
 export const personal = {
   name: "Ricardo Monterrosa",
   firstName: "Ricardo",
-  title: "Software Engineer",
-  tagline: "Full-stack engineer building fast, modern web experiences.",
+  title: "Frontend Developer",
+  tagline: "Frontend developer building fast, polished web experiences powered by AI.",
   email: "rickyantonio.codes@gmail.com",
   github: "https://github.com/ricky-antonio",
   linkedin: "https://www.linkedin.com/in/ricardomonterrosa/",
-  bio: "A full-stack engineer building AI-integrated products and high-performance web applications, from LLM-powered tools to real-time dashboards backed by live APIs. I work across the entire stack, combining engineering depth with a sharp eye for design. When I'm not shipping, you'll find me on the mats training jiu jitsu.",
+  bio: "A frontend developer who builds polished, high-performance web apps including AI-integrated tools like a real-time city dashboard and a streaming concept-mapping app. I care as much about design, accessibility, and performance as I do about features. When I'm not shipping, you'll find me on the mats training jiu jitsu.",
   hobbies: ["eat...", "code...", "jiu jitsu...", "sleep...", "repeat..."],
 };
 
@@ -36,11 +36,10 @@ export const skills = {
     { name: "Appwrite", icon: "SiAppwrite" },
   ],
   data: [
-    { name: "Pandas", icon: "SiPandas" },
     { name: "NumPy", icon: "SiNumpy" },
+    { name: "Seaborn", icon: "SiPlotly" },
     { name: "Matplotlib", icon: "SiPlotly" },
-    { name: "Scikit-Learn", icon: "SiScikitlearn" },
-    { name: "Jupyter", icon: "SiJupyter" },
+    { name: "Google Colab", icon: "SiGooglecolab" },
   ],
   tools: [
     { name: "Git", icon: "SiGit" },

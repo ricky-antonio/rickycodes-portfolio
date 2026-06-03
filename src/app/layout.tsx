@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://rickycodes.dev"),
   icons: { icon: "/favicon.svg" },
-  title: "Ricardo Monterrosa | Full-Stack Software Engineer",
+  title: "Ricardo Monterrosa | Frontend Developer",
   description:
-    "Full-stack Software Engineer specializing in React and Next.js. Building fast, accessible, and polished web applications.",
+    "Frontend developer specializing in React, TypeScript, and Next.js. Building fast, accessible, and polished web apps powered by AI.",
   alternates: {
     canonical: "https://rickycodes.dev",
   },
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Ricardo Monterrosa | Full-Stack Software Engineer",
+    title: "Ricardo Monterrosa | Frontend Developer",
     description:
-      "Full-stack Software Engineer specializing in React and Next.js. Building fast, accessible, and polished web applications.",
+      "Frontend developer specializing in React, TypeScript, and Next.js. Building fast, accessible, and polished web apps powered by AI.",
     url: "https://rickycodes.dev",
     siteName: "Ricardo Monterrosa",
     locale: "en_US",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ricardo Monterrosa | Full-Stack Software Engineer",
+    title: "Ricardo Monterrosa | Frontend Developer",
     description:
-      "Full-stack Software Engineer specializing in React and Next.js. Building fast, accessible, and polished web applications.",
+      "Frontend developer specializing in React, TypeScript, and Next.js. Building fast, accessible, and polished web apps powered by AI.",
   },
 };
 
