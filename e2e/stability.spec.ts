@@ -46,11 +46,11 @@ test.describe("Page structure and stability", () => {
     const allCards = page.locator("#projects article");
     const totalCount = await allCards.count();
 
-    await page.locator("#projects button", { hasText: "Web App" }).click();
+    await page.locator("#projects button", { hasText: "AI" }).click();
     await page.waitForTimeout(400);
-    const webAppCount = await page.locator("#projects article").count();
-    expect(webAppCount).toBeLessThan(totalCount);
-    expect(webAppCount).toBeGreaterThan(0);
+    const aiCount = await page.locator("#projects article").count();
+    expect(aiCount).toBeLessThan(totalCount);
+    expect(aiCount).toBeGreaterThan(0);
 
     await page.locator("#projects button", { hasText: "UI/UX" }).click();
     await page.waitForTimeout(400);
@@ -69,10 +69,10 @@ test.describe("Page structure and stability", () => {
     await expect(page.locator("#experience")).toContainText("Transdev");
   });
 
-  test("contact section has email link", async ({ page }) => {
+  test("contact section has a contact method", async ({ page }) => {
     await page.locator("#contact").scrollIntoViewIfNeeded();
-    const emailLink = page.locator('a[href^="mailto:"]');
-    await expect(emailLink.first()).toBeAttached();
+    // Site uses a contact form + social links rather than a mailto link
+    await expect(page.locator("#contact form, #contact a")).toBeAttached();
   });
 
   test("no console errors on page load", async ({ page }) => {
