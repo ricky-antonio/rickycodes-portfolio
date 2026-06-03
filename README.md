@@ -1,6 +1,6 @@
-# rickycodes.dev — Personal Portfolio
+# rickycodes.dev: Personal Portfolio
 
-A fast, accessible, single-page portfolio built with the modern React stack — featuring my projects, experience, and a hardened contact form. Designed with as much care for performance, accessibility, and SEO as for visual polish.
+A fast, accessible, single-page portfolio built with the modern React stack: featuring my projects, experience, and a hardened contact form. Designed with as much care for performance, accessibility, and SEO as for visual polish.
 
 **Live:** [rickycodes.dev](https://rickycodes.dev)
 
@@ -14,11 +14,11 @@ A fast, accessible, single-page portfolio built with the modern React stack — 
 
 ## Highlights
 
-- **Tested** — unit, component, and end-to-end suites covering accessibility (axe-core), links, performance, responsiveness, and SEO
-- **Accessible** — built to accessibility standards and verified with automated a11y tests
-- **SEO-ready** — dynamic Open Graph image generation, sitemap, robots, and canonical metadata
-- **Hardened contact form** — server-side validation, rate limiting, honeypot, and timing checks against spam
-- **Performance-focused** — optimized images (next/image, webp), minimal client JS, fast LCP
+- **Tested**: unit, component, and end-to-end suites covering accessibility (axe-core), links, performance, responsiveness, and SEO
+- **Accessible**: built to accessibility standards and verified with automated a11y tests
+- **SEO-ready**: dynamic Open Graph image generation, sitemap, robots, and canonical metadata
+- **Hardened contact form**: server-side validation, rate limiting, honeypot, and timing checks against spam
+- **Performance-focused**: optimized images (next/image, webp), minimal client JS, fast LCP
 
 ## Running locally
 
