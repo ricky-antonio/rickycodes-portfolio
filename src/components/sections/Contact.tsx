@@ -21,7 +21,7 @@ export function Contact() {
             // Contact
           </p>
           <h2 className="fade-up mb-4 text-4xl font-extrabold tracking-tight text-fg sm:text-5xl" style={{ transitionDelay: "50ms" }}>
-            Let&apos;s Build Something Amazing
+            Let&apos;s Work Together
           </h2>
           <p className="fade-up mb-12 text-lg text-muted" style={{ transitionDelay: "100ms" }}>
             I&apos;m open to new opportunities, collaborations, and interesting projects.
