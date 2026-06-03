@@ -43,23 +43,35 @@ test.describe("Page structure and stability", () => {
   });
 
   test("project filter tabs work correctly", async ({ page }) => {
+    await page.locator("#projects").scrollIntoViewIfNeeded();
     const allCards = page.locator("#projects article");
     const totalCount = await allCards.count();
 
     await page.locator("#projects button", { hasText: "AI" }).click();
-    await page.waitForTimeout(400);
+    // Wait for Framer Motion exit animations to complete (max ~650ms at 6 items)
+    await page.waitForFunction(
+      (total) => document.querySelectorAll("#projects article").length < total,
+      totalCount,
+      { timeout: 3000 }
+    );
     const aiCount = await page.locator("#projects article").count();
-    expect(aiCount).toBeLessThan(totalCount);
     expect(aiCount).toBeGreaterThan(0);
 
     await page.locator("#projects button", { hasText: "UI/UX" }).click();
-    await page.waitForTimeout(400);
+    await page.waitForFunction(
+      (prev) => document.querySelectorAll("#projects article").length !== prev,
+      aiCount,
+      { timeout: 3000 }
+    );
     const uiuxCount = await page.locator("#projects article").count();
-    expect(uiuxCount).toBeLessThan(totalCount);
     expect(uiuxCount).toBeGreaterThan(0);
 
     await page.locator("#projects button", { hasText: "All" }).click();
-    await page.waitForTimeout(400);
+    await page.waitForFunction(
+      (total) => document.querySelectorAll("#projects article").length === total,
+      totalCount,
+      { timeout: 3000 }
+    );
     expect(await page.locator("#projects article").count()).toBe(totalCount);
   });
 
