@@ -32,7 +32,8 @@ test.describe("Page structure and stability", () => {
 
   test("hero section has name and CTA", async ({ page }) => {
     await expect(page.locator("#hero")).toContainText("Ricardo");
-    await expect(page.locator('a[href="#contact"]').first()).toBeVisible();
+    // Scope to #hero — the desktop nav also has a[href="#contact"] but is hidden on mobile
+    await expect(page.locator('#hero a[href="#contact"]').first()).toBeVisible();
   });
 
   test("projects section renders project cards", async ({ page }) => {

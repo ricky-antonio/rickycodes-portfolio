@@ -73,16 +73,14 @@ test.describe("Accessibility", () => {
   });
 
   test("all images load without error (no broken images)", async ({ page }) => {
-    // Scroll incrementally so IntersectionObserver triggers for lazy images
-    await page.evaluate(async () => {
-      const total = document.body.scrollHeight;
-      const step = Math.floor(total / 6);
-      for (let y = 0; y <= total; y += step) {
-        window.scrollTo(0, y);
-        await new Promise((r) => setTimeout(r, 200));
-      }
-      window.scrollTo(0, 0);
-    });
+    // Scroll each image into view via Playwright so IntersectionObserver fires
+    // across all browser engines (JS window.scrollTo doesn't trigger it in WebKit)
+    const images = page.locator("img");
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      await images.nth(i).scrollIntoViewIfNeeded().catch(() => {});
+      await page.waitForTimeout(150);
+    }
     await page.waitForLoadState("networkidle");
 
     const brokenImages = await page.evaluate(async () => {
