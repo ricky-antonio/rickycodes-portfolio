@@ -84,7 +84,7 @@ test.describe("Page structure and stability", () => {
   test("contact section has a contact method", async ({ page }) => {
     await page.locator("#contact").scrollIntoViewIfNeeded();
     // Site uses a contact form + social links rather than a mailto link
-    await expect(page.locator("#contact form, #contact a")).toBeAttached();
+    await expect(page.locator("#contact form, #contact a").first()).toBeAttached();
   });
 
   test("no console errors on page load", async ({ page }) => {
