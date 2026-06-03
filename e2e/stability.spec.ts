@@ -24,7 +24,7 @@ test.describe("Page structure and stability", () => {
   });
 
   test("navbar renders with logo and nav links", async ({ page }) => {
-    await expect(page.getByText(/RM\./)).toBeVisible();
+    await expect(page.locator("nav").getByText(/RM\./)).toBeVisible();
     for (const label of ["About", "Skills", "Projects", "Experience", "Contact"]) {
       await expect(page.locator(`a[href="#${label.toLowerCase()}"]`).first()).toBeAttached();
     }
