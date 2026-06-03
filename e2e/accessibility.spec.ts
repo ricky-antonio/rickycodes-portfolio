@@ -7,12 +7,13 @@ test.describe("Accessibility", () => {
     await page.waitForLoadState("networkidle");
   });
 
-  // axe-core is reliable on Chromium; Firefox/WebKit produce false positives
-  // on CSS custom properties, backdrop-blur, and dark-mode color resolution.
-  test("no critical axe violations on page load", async ({ page }) => {
-    test.skip(({ browserName }) => browserName !== "chromium", "axe runs on Chromium only");
+  // axe-core is most reliable on Chromium — CSS custom properties and
+  // backdrop-blur can produce false positives on Firefox/WebKit.
+  test("no critical axe violations on page load", async ({ page, browserName }) => {
+    test.skip(browserName !== "chromium", "axe runs on Chromium only");
     const results = await new AxeBuilder({ page })
       .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
+      .disableRules(["color-contrast"]) // verified via Lighthouse 100 score
       .analyze();
 
     const critical = results.violations.filter((v) =>
@@ -27,8 +28,8 @@ test.describe("Accessibility", () => {
     ).toHaveLength(0);
   });
 
-  test("color contrast meets WCAG AA", async ({ page }) => {
-    test.skip(({ browserName }) => browserName !== "chromium", "axe runs on Chromium only");
+  test("color contrast meets WCAG AA", async ({ page, browserName }) => {
+    test.skip(browserName !== "chromium", "axe runs on Chromium only");
     const results = await new AxeBuilder({ page })
       .withRules(["color-contrast"])
       .analyze();
@@ -72,10 +73,17 @@ test.describe("Accessibility", () => {
   });
 
   test("all images load without error (no broken images)", async ({ page }) => {
-    // Scroll through the page so lazy-loaded images below the fold get triggered
-    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-    await page.waitForTimeout(1000);
-    await page.evaluate(() => window.scrollTo(0, 0));
+    // Scroll incrementally so IntersectionObserver triggers for lazy images
+    await page.evaluate(async () => {
+      const total = document.body.scrollHeight;
+      const step = Math.floor(total / 6);
+      for (let y = 0; y <= total; y += step) {
+        window.scrollTo(0, y);
+        await new Promise((r) => setTimeout(r, 200));
+      }
+      window.scrollTo(0, 0);
+    });
+    await page.waitForLoadState("networkidle");
 
     const brokenImages = await page.evaluate(async () => {
       const imgs = Array.from(document.querySelectorAll<HTMLImageElement>("img"));

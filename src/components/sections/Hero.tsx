@@ -52,6 +52,7 @@ export function Hero() {
             {/* Code block — LCP element on mobile, so it animates in the first
                 paint batch (no delay) to keep its LCP timestamp early. */}
             <div
+              aria-hidden="true"
               className="anim-fade-up mb-8 w-full max-w-md rounded-xl border border-border bg-surface p-5 text-left shadow-lg"
               style={{ animationDelay: "0ms" }}
             >
