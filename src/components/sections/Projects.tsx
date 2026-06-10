@@ -65,25 +65,43 @@ export function Projects() {
                 className="group flex flex-col overflow-hidden rounded-xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/10"
               >
                 {/* Screenshot */}
-                <Link href={project.demo} target="_blank" rel="noopener noreferrer" className="relative h-44 w-full overflow-hidden bg-bg block">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  {/* Category badge */}
-                  <span className="absolute left-3 top-3 rounded-md bg-bg/80 px-2.5 py-1 text-xs font-semibold text-accent-text backdrop-blur-sm">
-                    {project.category}
-                  </span>
-                </Link>
+                {project.demo ? (
+                  <Link href={project.demo} target="_blank" rel="noopener noreferrer" className="relative h-44 w-full overflow-hidden bg-bg block">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <span className="absolute left-3 top-3 rounded-md bg-bg/80 px-2.5 py-1 text-xs font-semibold text-accent-text backdrop-blur-sm">
+                      {project.category}
+                    </span>
+                  </Link>
+                ) : (
+                  <div className="relative h-44 w-full overflow-hidden bg-bg">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <span className="absolute left-3 top-3 rounded-md bg-bg/80 px-2.5 py-1 text-xs font-semibold text-accent-text backdrop-blur-sm">
+                      {project.category}
+                    </span>
+                  </div>
+                )}
 
                 {/* Content */}
                 <div className="flex flex-1 flex-col gap-3 p-5">
-                  <Link href={project.demo} target="_blank" rel="noopener noreferrer">
-                    <h3 className="font-bold text-fg hover:text-accent transition-colors">{project.title}</h3>
-                  </Link>
+                  {project.demo ? (
+                    <Link href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <h3 className="font-bold text-fg hover:text-accent transition-colors">{project.title}</h3>
+                    </Link>
+                  ) : (
+                    <h3 className="font-bold text-fg">{project.title}</h3>
+                  )}
                   <p className="text-sm leading-relaxed text-muted flex-1">{project.description}</p>
 
                   {/* Tech pills */}
@@ -108,14 +126,16 @@ export function Projects() {
                     >
                       <FiGithub size={14} /> GitHub
                     </Link>
-                    <Link
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs font-medium text-muted transition-colors hover:text-accent"
-                    >
-                      <FiExternalLink size={14} /> Live Demo
-                    </Link>
+                    {project.demo && (
+                      <Link
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-xs font-medium text-muted transition-colors hover:text-accent"
+                      >
+                        <FiExternalLink size={14} /> Live Demo
+                      </Link>
+                    )}
                   </div>
                 </div>
               </motion.article>

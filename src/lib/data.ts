@@ -54,6 +54,16 @@ export const skills = {
 
 export const projects = [
   {
+    title: "Bloom - Concept Explorer",
+    category: "AI",
+    description:
+      "Type any word and watch it bloom — AI expands your idea into an interactive force-directed graph of connected concepts, powered by D3 physics and streaming Claude AI.",
+    tech: ["TypeScript", "Next.js", "D3.js", "TailwindCSS", "Claude AI", "Vitest"],
+    github: "https://github.com/ricky-antonio/bloom",
+    demo: "https://bloom.rickycodes.dev/",
+    image: "/projects/bloom.webp",
+  },
+  {
     title: "Citadel - Urban Intelligence",
     category: "AI",
     description:
@@ -74,14 +84,14 @@ export const projects = [
     image: "/projects/lodestar.webp",
   },
   {
-    title: "Bloom - Concept Explorer",
-    category: "AI",
+    title: "BaseKit - SaaS Starter",
+    category: "Full-Stack",
     description:
-      "Type any word and watch it bloom — AI expands your idea into an interactive force-directed graph of connected concepts, powered by D3 physics and streaming Claude AI.",
-    tech: ["TypeScript", "Next.js", "D3.js", "TailwindCSS", "Claude AI", "Vitest"],
-    github: "https://github.com/ricky-antonio/bloom",
-    demo: "https://bloom.rickycodes.dev/",
-    image: "/projects/bloom.webp",
+      "Production-ready SaaS starter with auth, Stripe subscription billing, teams, admin dashboard, and transactional email — wired end-to-end so you can ship on day one.",
+    tech: ["TypeScript", "Next.js", "Supabase", "Stripe", "Resend", "shadcn/ui"],
+    github: "https://github.com/ricky-antonio/basekit",
+    demo: "https://basekit.rickycodes.dev/",
+    image: "/projects/basekit.webp",
   },
   {
     title: "Apple iPhone Clone",
@@ -102,16 +112,6 @@ export const projects = [
     github: "https://github.com/ricky-antonio/json-formatter",
     demo: "https://unfold.rickycodes.dev/",
     image: "/projects/unfold.webp",
-  },
-  {
-    title: "StoreIt - Cloud Storage",
-    category: "Full-Stack",
-    description:
-      "Full-stack cloud storage with OTP email auth, file uploads and sharing, search and sort, and a storage-usage dashboard — built on Appwrite.",
-    tech: ["TypeScript", "React", "Next.js", "TailwindCSS", "shadcn/ui", "Appwrite"],
-    github: "https://github.com/ricky-antonio/store_it",
-    demo: "https://store-it.rickycodes.dev/",
-    image: "/projects/storeit.webp",
   },
 ];
 
