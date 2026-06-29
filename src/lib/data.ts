@@ -80,7 +80,7 @@ export const projects = [
       "A Trello competitor with AI-powered task tools — six task views, smart prioritization, auto-scheduling, and a keyboard-first workflow designed to keep you in flow.",
     tech: ["TypeScript", "Next.js", "Supabase", "shadcn/ui", "Claude AI", "Vitest"],
     github: "https://github.com/ricky-antonio/lodestar",
-    demo: "https://lodestar-amber.vercel.app",
+    demo: "https://lodestar.rickycodes.dev/",
     image: "/projects/lodestar.webp",
   },
   {
